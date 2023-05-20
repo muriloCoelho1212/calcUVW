@@ -19,10 +19,5 @@ namespace calcUVW
             Routing.RegisterRoute(nameof(fatorK_2), typeof(fatorK_2));
             Routing.RegisterRoute(nameof(ajuda1), typeof(ajuda1));
         }
-
-        private void Tema_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 }

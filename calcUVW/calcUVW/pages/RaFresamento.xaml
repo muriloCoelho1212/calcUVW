@@ -7,19 +7,19 @@
         <ToolbarItem IconImageSource="ajuda.png"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#393838" Orientation="Vertical">
+        <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Orientation="Vertical">
             <StackLayout Padding="20,30">
 
                 <Label x:Name="labelFerramenta"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Diâmetro da Ferramenta:"
                         Padding="0, 10"
 						 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                 <Entry x:Name="DeEntry"
-					   TextColor="#E7FBF7"
+					   TextColor="{StaticResource Textcolor}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -33,13 +33,13 @@
                 <Label x:Name="labelPassLat"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Passo lateral (ae):"
                         Padding="0, 10"
 						 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                 <Entry x:Name="AEEntry"
-						TextColor="#E7FBF7"
+						TextColor="{StaticResource Textcolor}"
 						FontFamily="Arial"
 						FontSize="24"
 						Keyboard="Numeric"
@@ -56,7 +56,7 @@
                         <Label x:Name="Hcvalor"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{StaticResource ResultColor}"
+							   TextColor="{StaticResource Textcolor}"
 							   Text="Altura da Crista: "
 							   Padding="22, 20, 10, 20"
                         />
@@ -68,7 +68,7 @@
                         <Label x:Name="Ravalor"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{StaticResource ResultColor}"
+							   TextColor="{StaticResource Textcolor}"
 							   Text="Rug. RA aproximada: "
 							   Padding="22, 20, 10, 20"
 						/>
@@ -79,7 +79,7 @@
                         <Label x:Name="Anali"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{StaticResource ResultColor}"
+							   TextColor="{StaticResource Textcolor}"
 							   Padding="22, 20, 10, 20"
 							   Text="Tipo da superfície: "
 						/>
@@ -88,9 +88,9 @@
             </StackLayout>
             <Button x:Name="calcular"
 					CornerRadius="20"
-					BackgroundColor="#0E76BC"
+					BackgroundColor="{StaticResource ButtonBackgroundColor}"
 					Text="Calcular"
-					TextColor="#E7FAF7"
+					TextColor="{StaticResource Textcolor}"
 					FontSize="24"
 					FontFamily="Arial"
 					FontAttributes="Bold"

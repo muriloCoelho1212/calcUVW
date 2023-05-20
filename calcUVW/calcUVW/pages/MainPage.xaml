@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.pages.MainPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#393838">
+        <StackLayout BackgroundColor="{StaticResource BackgroundColor}">
 
             <Image x:Name="logo_uvw"
 				Source="logoUVW.png"/>
@@ -11,7 +11,7 @@
             <StackLayout Orientation="Vertical" Spacing="60" Padding="40">
                 <Button x:Name="fatork"
 				        CornerRadius="20"
-				        BackgroundColor="#0E76BC"
+				        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                         Text="Fator K"
                         TextColor="#E7FAF7"
                         FontSize="24"
@@ -25,9 +25,9 @@
                    />
                 <Button x:Name="calotaesf"
 				        CornerRadius="20"
-					    BackgroundColor="#0E76BC"
+					    BackgroundColor="{StaticResource ButtonBackgroundColor}"
                         Text="Calota Esférica"
-                        TextColor="#E7FAF7"
+                        TextColor="{StaticResource Textcolor}"
 					    FontFamily="Arial"
 					    FontSize="24"
                         FontAttributes="Bold"
@@ -40,9 +40,9 @@
 
                 <Button x:Name="rafres"
 					    CornerRadius="20"
-					    BackgroundColor="#0E76BC"
+					    BackgroundColor="{StaticResource ButtonBackgroundColor}"
                         Text="Ra para Fresamento"
-                        TextColor="#E7FAF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontFamily="Arial"
 					    FontSize="24"
                         FontAttributes="Bold"
@@ -56,8 +56,8 @@
             <Button x:Name="rodape"
 					FontFamily="Arial"
 					FontSize="20"
-					TextColor="#E7FBF7"
-                    BackgroundColor="#000"
+					TextColor="{StaticResource Textcolor}"
+                    BackgroundColor="{StaticResource CabecalhoRodape}"
 					Text="CodeCell Tec."
                     VerticalOptions="EndAndExpand"
                     Padding="12"

@@ -7,18 +7,18 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ajuda2_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#393838">
+        <StackLayout BackgroundColor="{StaticResource Textcolor}">
             <StackLayout Padding="20, 30">
                 <Label x:Name="label_C"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="#FFFFFF"
+				        TextColor="{StaticResource Textcolor}"
 				        Text="Comprimento da peça:"
                        Padding="0, 10"
                     />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="C"
-                        TextColor="#E7FBF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -32,13 +32,13 @@
                 <Label x:Name="label_alturaA"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="#FFFFFF"
+				        TextColor="{StaticResource Textcolor}"
 				        Text="Altura do lado A:"    
                             Padding="0, 10"
                     />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="ladoA"
-                        TextColor="#E7FBF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -52,13 +52,13 @@
                 <Label x:Name="label_alturaB"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="#FFFFFF"
+				        TextColor="{StaticResource Textcolor}"
 				        Text="Altura do lado B:"    
                        Padding="0, 10"
                     />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="ladoB"
-                        TextColor="#E7FBF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -72,13 +72,13 @@
                 <Label x:Name="label_raio_dobra"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="#FFFFFF"
+				        TextColor="{StaticResource Textcolor}"
 				        Text="Raio da dobra:"    
                         Padding="0, 10"
                     />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="raio_dobra"
-                        TextColor="#E7FBF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -103,9 +103,9 @@
             </StackLayout>
             <Button x:Name="Calcular"
 			    CornerRadius="20"
-			    BackgroundColor="#0E76BC"
+			    BackgroundColor="{StaticResource ButtonBackgroundColor}"
                 Text="Calcular"
-                TextColor="#E7FAF7"
+                TextColor="{StaticResource Textcolor}"
                 FontSize="24"
                 FontFamily="Arial"
                 FontAttributes="Bold"

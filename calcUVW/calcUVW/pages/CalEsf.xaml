@@ -12,13 +12,13 @@
                 <Label x:Name="labelFe"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Diâmetro da fresa esférica (De):"
                        Padding="0, 10"
 					 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="DiamtroFe"
-                       TextColor="#E7FBF7"
+                       TextColor="{StaticResource Textcolor}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -32,13 +32,13 @@
                 <Label x:Name="labelCorte"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Profundidade de corte (ap):"
                        Padding="0, 10"
 					 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="ProfCorte"
-					   TextColor="#E7FBF7"
+					   TextColor="{StaticResource Textcolor}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -52,13 +52,13 @@
                 <Label x:Name="labelRpm"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="RPM no diâmetro externo:"
                        Padding="0, 10"
 					 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                 <Entry x:Name="diamRpm"
-					   TextColor="#E7FBF7"
+					   TextColor="{StaticResource Textcolor}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -74,7 +74,7 @@
                         <Label x:Name="labelCal"
 						       FontFamily="Arial"
 						       FontSize="24"
-						       TextColor="{StaticResource ResultColor}"
+						       TextColor="{StaticResource Textcolor}"
 						       Text="Diâmetro da calota:"
                                Padding="22, 20, 10, 20"
 					    />
@@ -85,7 +85,7 @@
                         <Label x:Name="labelRpmCal"
 						       FontFamily="Arial"
 						       FontSize="24"
-						       TextColor="{StaticResource ResultColor}"
+						       TextColor="{StaticResource Textcolor}"
 						       Text="Correção do RPM para a calota:"
                                Padding="22, 20, 10, 20"
 					    />
@@ -94,9 +94,9 @@
             </StackLayout>
             <Button x:Name="calcular"
 			        CornerRadius="20"
-			        BackgroundColor="#0E76BC"
+			        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                     Text="Calcular"
-                    TextColor="#E7FAF7"
+                    TextColor="{StaticResource Textcolor}"
                     FontSize="24"
                     FontFamily="Arial"
                     FontAttributes="Bold"

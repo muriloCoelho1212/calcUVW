@@ -4,17 +4,22 @@
              x:Class="calcUVW.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Cabecalho">#000</Color>
-            <Color x:Key="BackgroundColor">#393838</Color>
-            <Color x:Key="EntryBackgroundColor">#7E7E7E</Color>
-            <Color x:Key="PlaceholderColor">#CDCDCD</Color>
-            <Color x:Key="ResultColor">#fff</Color>
+            <!-- Global -->
+            <Color x:Key="CabecalhoRodape">#000</Color>
+            <Color x:Key="ButtonBackgroundColor">#0E76BC</Color>
             
-            <!--Tema claro-->
+            <!-- Dark Theme -->
+            <Color x:Key="BackgroundColorDark">#393838</Color>
+            <Color x:Key="EntryBackgroundColorDark">#7E7E7E</Color>
+            <Color x:Key="PlaceholderColorDark">#CDCDCD</Color>
+            <Color x:Key="TextcolorDark">#E7FAF7</Color>
+            
+            <!-- Light Theme -->
 
             <Color x:Key="BackgroundColorLight">#EFEFEF</Color>
             <Color x:Key="EntryBackgroundColorLight">#E7FBF7</Color>
-            <Color x:Key="LabelColor">#000</Color>
+            <Color x:Key="PlaceholderColorLight">#818285</Color>
+            <Color x:Key="TextcolorLight">#1B1B1B</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

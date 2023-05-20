@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.pages.ajuda2">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#393838">
+        <StackLayout BackgroundColor="{StaticResource BackgroundColor]}">
             <Label x:Name="textAjuda"
 		      FontFamily="Arial"
 		      FontSize="24"
               Padding="20"
-		      TextColor="#FFFFFF"
+		      TextColor="{StaticResource Textcolor}"
               Text="Crie duas dobras a 90 graus, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C e R. Coloque os valores medidos nos campos abaixo:"
               />
             <Image x:Name="img1" Source="dobrado.png"/>

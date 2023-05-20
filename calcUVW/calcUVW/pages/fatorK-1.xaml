@@ -7,18 +7,18 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ajuda_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#393838" Orientation="Vertical">
+        <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Orientation="Vertical">
             <StackLayout Padding="20, 30">
                 <Label x:Name="labelBlank"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Comprimento do Blank:"
                        Padding="0, 10"
                 />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="compBlank"
-                           TextColor="#E7FBF7"
+                           TextColor="{StaticResource Textcolor}"
                            FontFamily="Arial"
                            FontSize="24"
                            Keyboard="Numeric"
@@ -32,13 +32,13 @@
                 <Label x:Name="labelChapa"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="#FFFFFF"
+						TextColor="{StaticResource Textcolor}"
 						Text="Espessura da chapa:"
                        Padding="0, 10"
 			    />
                 <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColor}" CornerRadius="25" Padding="5">
                     <Entry x:Name="espessChapa"
-                       TextColor="#E7FBF7"
+                       TextColor="{StaticResource Textcolor}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -51,14 +51,14 @@
                 <StackLayout Orientation="Horizontal" Padding="0, 20">
                     <CheckBox 
                         x:Name="angRandom"
-                        Color="#E7FBF7"
+                        Color="{StaticResource Textcolor}"
                         ScaleX="1.8"
                         ScaleY="1.8"
                     />
                     <Label
                         Text="Ângulo aleatório?"
                         VerticalOptions="Center"
-                        TextColor="#E7FBF7"
+                        TextColor="{StaticResource Textcolor}"
                         FontSize="24"
                         Padding="10"
                     />
@@ -67,9 +67,9 @@
 
             <Button x:Name="btnProxEtapa"
 			        CornerRadius="20"
-			        BackgroundColor="#0E76BC"
+			        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                     Text="Próxima Etapa"
-                    TextColor="#E7FAF7"
+                    TextColor="{StaticResource Textcolor}"
                     FontSize="24"
                     FontFamily="Arial"
                     FontAttributes="Bold"

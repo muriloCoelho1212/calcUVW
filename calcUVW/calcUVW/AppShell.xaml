@@ -6,15 +6,15 @@
              FlyoutBackgroundColor="#393838">
 
     <Shell.Resources>
-        <ResourceDictionary>
-            <Style x:Key="StandardStyle" TargetType="Element">
-                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColor}"/>
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Cabecalho}"/>
+        <ResourceDictionary x:Key="DarkTheme">
+            <Style x:Key="StandardStyleDark" TargetType="Element">
+                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColorDark}"/>
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CabecalhoRodape}"/>
             </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyle}"/>
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyle}"/>
+            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyleDark}"/>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyleDark}"/>
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource TextcolorDark}"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -22,13 +22,43 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="White" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorDark}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource TextcolorDark}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Cabecalho}" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource CabecalhoRodape}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="LightTheme">
+            <Style x:Key="StandardStyleLight" TargetType="Element">
+                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColorLight}"/>
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CabecalhoRodape}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyleLight}"/>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyleLight}"/>
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextcolorLight}"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorLight}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource TextcolorLight}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource CabecalhoRodape}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -50,6 +80,5 @@
     <FlyoutItem Title="Calota Esférica">
         <ShellContent Route="CalEsf" ContentTemplate="{DataTemplate local:CalEsf}"/>
     </FlyoutItem>
-    <MenuItem x:Name="Tema" Text="Tema" Clicked="Tema_Clicked" IconImageSource="sol.png">
-    </MenuItem>
+    <ShellContent  />
 </Shell>
