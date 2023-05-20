@@ -4,7 +4,7 @@
              x:Class="calcUVW.pages.RaFresamento"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="ajuda.png"/>
+        <ToolbarItem   IconImageSource="ajuda.png" Clicked="ajudaRA_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Orientation="Vertical">

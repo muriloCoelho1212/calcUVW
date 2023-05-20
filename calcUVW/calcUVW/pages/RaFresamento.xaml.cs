@@ -12,6 +12,12 @@ namespace calcUVW.pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RaFresamento : ContentPage
     {
+
+        private async void ajudaRA_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ajudaRA(), true);
+        }
+
         public RaFresamento()
         {
             InitializeComponent();
@@ -81,5 +87,7 @@ namespace calcUVW.pages
             Anali.Text = Anali.Text.Substring(0, 20);
             raCalc();
         }
+
+     
     }
 }

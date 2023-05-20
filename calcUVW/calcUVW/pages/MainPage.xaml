@@ -52,6 +52,7 @@
                         Pressed="changeColor_Pressed"
                         Released="changeColor_Released"
 			        />
+
             </StackLayout>
             <Button x:Name="rodape"
 					FontFamily="Arial"
