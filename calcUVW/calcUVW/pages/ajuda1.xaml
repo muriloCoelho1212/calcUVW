@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.pages.ajuda1">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#393838">
+            <Label x:Name="textAjuda"
+		      FontFamily="Arial"
+		      FontSize="24"
+              Padding="20"
+		      TextColor="#FFFFFF"
+              Text="Recorte um blank retangular com o material e espessura que você irá trabalhar com as dobras. Faça a medição do comprimento deste blank e coloque o valor no campo L da página."
+              />
+            <Image x:Name="img1"
+		      Source="blankAberto.png"/>
+            <Image x:Name="logo_uvw"
+		      Source="logoUVW.png"
+              VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

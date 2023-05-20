@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Cabecalho">#000</Color>
+            <Color x:Key="BackgroundColor">#393838</Color>
+            <Color x:Key="EntryBackgroundColor">#7E7E7E</Color>
+            <Color x:Key="PlaceholderColor">#CDCDCD</Color>
+            <Color x:Key="ResultColor">#fff</Color>
+            
+            <!--Tema claro-->
+
+            <Color x:Key="BackgroundColorLight">#EFEFEF</Color>
+            <Color x:Key="EntryBackgroundColorLight">#E7FBF7</Color>
+            <Color x:Key="LabelColor">#000</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

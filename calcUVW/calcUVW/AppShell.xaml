@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.AppShell"
+             xmlns:local="clr-namespace:calcUVW.pages"
+             FlyoutBackgroundColor="#393838">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StandardStyle" TargetType="Element">
+                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColor}"/>
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Cabecalho}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyle}"/>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyle}"/>
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Cabecalho}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <FlyoutItem Title="Menu">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Fator K">
+        <ShellContent Route="fatorK_1" ContentTemplate="{DataTemplate local:fatorK_1}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Ra para Fresamento">
+        <ShellContent Route="RaFresamento" ContentTemplate="{DataTemplate local:RaFresamento}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Calota Esférica">
+        <ShellContent Route="CalEsf" ContentTemplate="{DataTemplate local:CalEsf}"/>
+    </FlyoutItem>
+    <MenuItem x:Name="Tema" Text="Tema" Clicked="Tema_Clicked" IconImageSource="sol.png">
+    </MenuItem>
+</Shell>

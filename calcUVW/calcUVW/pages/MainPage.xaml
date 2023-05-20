@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.pages.MainPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#393838">
+
+            <Image x:Name="logo_uvw"
+				Source="logoUVW.png"/>
+
+            <StackLayout Orientation="Vertical" Spacing="60" Padding="40">
+                <Button x:Name="fatork"
+				        CornerRadius="20"
+				        BackgroundColor="#0E76BC"
+                        Text="Fator K"
+                        TextColor="#E7FAF7"
+                        FontSize="24"
+                        FontFamily="Arial"
+                        FontAttributes="Bold"
+                        BorderColor="#66ffffff"
+                        BorderWidth="2"
+                        Clicked="Fatork_Clicked"
+                        Pressed="changeColor_Pressed"
+                        Released="changeColor_Released"
+                   />
+                <Button x:Name="calotaesf"
+				        CornerRadius="20"
+					    BackgroundColor="#0E76BC"
+                        Text="Calota Esférica"
+                        TextColor="#E7FAF7"
+					    FontFamily="Arial"
+					    FontSize="24"
+                        FontAttributes="Bold"
+                        BorderColor="#66ffffff"
+                        BorderWidth="2"
+                        Clicked="calotaesf_Clicked"
+                        Pressed="changeColor_Pressed"
+                        Released="changeColor_Released"
+                   />
+
+                <Button x:Name="rafres"
+					    CornerRadius="20"
+					    BackgroundColor="#0E76BC"
+                        Text="Ra para Fresamento"
+                        TextColor="#E7FAF7"
+                        FontFamily="Arial"
+					    FontSize="24"
+                        FontAttributes="Bold"
+                        BorderColor="#66ffffff"
+                        BorderWidth="2"
+                        Clicked="rafres_Clicked"
+                        Pressed="changeColor_Pressed"
+                        Released="changeColor_Released"
+			        />
+            </StackLayout>
+            <Button x:Name="rodape"
+					FontFamily="Arial"
+					FontSize="20"
+					TextColor="#E7FBF7"
+                    BackgroundColor="#000"
+					Text="CodeCell Tec."
+                    VerticalOptions="EndAndExpand"
+                    Padding="12"
+				/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
