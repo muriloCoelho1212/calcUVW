@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.pages.fatorK_3"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+   
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ajuda.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource BackgroundColorDark}">
+            <StackLayout Padding="20, 30">
+                <Label x:Name="label_C"
+				        FontFamily="Arial"
+				        FontSize="24"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Comprimento da peça:"
+                       Padding="0, 10"
+                    />
+                <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" CornerRadius="25" Padding="5">
+                    <Entry x:Name="C"
+                        TextColor="{StaticResource TextcolorLight}"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        Keyboard="Numeric"
+                        Placeholder="0"
+                        PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                        MaxLength="10"
+                        ClearButtonVisibility="WhileEditing"
+                        ReturnType="Next"
+			        />
+                </pancake:PancakeView>
+                <Label x:Name="label_alturaA"
+				        FontFamily="Arial"
+				        FontSize="24"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Altura do lado A:"    
+                        Padding="0, 10"
+                    />
+                <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" CornerRadius="25" Padding="5">
+                    <Entry x:Name="ladoA"
+                        TextColor="{StaticResource TextcolorDark}"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        Keyboard="Numeric"
+                        Placeholder="0"
+                        PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                        MaxLength="10"
+                        ClearButtonVisibility="WhileEditing"
+                        ReturnType="Next"
+			        />
+                </pancake:PancakeView>
+                <Label x:Name="label_alturaB"
+				        FontFamily="Arial"
+				        FontSize="24"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Altura do lado B:"    
+                       Padding="0, 10"
+                    />
+                <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" CornerRadius="25" Padding="5">
+                    <Entry x:Name="ladoB"
+                        TextColor="{StaticResource TextcolorDark}"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        Keyboard="Numeric"
+                        Placeholder="0"
+                        PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                        MaxLength="10"
+                        ClearButtonVisibility="WhileEditing"
+                        ReturnType="Next"
+			        />
+                </pancake:PancakeView>
+                <Label x:Name="label_raio_dobra"
+				        FontFamily="Arial"
+				        FontSize="24"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Raio da dobra:"    
+                        Padding="0, 10"
+                    />
+                <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" CornerRadius="25" Padding="5">
+                    <Entry x:Name="raio_dobra"
+                        TextColor="{StaticResource TextcolorDark}"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        Keyboard="Numeric"
+                        Placeholder="0"
+                        PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                        MaxLength="10"
+                        ClearButtonVisibility="WhileEditing"
+                        ReturnType="Next"
+			        />
+                </pancake:PancakeView>
+                <StackLayout Padding="-20, 0, -20, 0">
+                    <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" Margin="0, 10, 0, 0">
+                        <Label x:Name="label_result"
+                                 FontFamily="Arial"
+                                 Padding="22, 20, 10, 20"
+			                     FontSize="24"
+			                     TextColor="{StaticResource TextcolorDark}"
+                                 Text="Fator K:"
+                        />
+                    </pancake:PancakeView>
+                </StackLayout>
+            </StackLayout>
+            <Button x:Name="Calcular"
+			    CornerRadius="20"
+			    BackgroundColor="{StaticResource ButtonBackgroundColor}"
+                Text="Calcular"
+                TextColor="{StaticResource TextcolorDark}"
+                FontSize="24"
+                FontFamily="Arial"
+                FontAttributes="Bold"
+                BorderColor="#66ffffff"
+                BorderWidth="2"
+                VerticalOptions="EndAndExpand"
+                Padding="20"
+                Margin="10, -20, 10, 10"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

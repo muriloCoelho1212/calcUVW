@@ -7,7 +7,12 @@
             <!-- Global -->
             <Color x:Key="CabecalhoRodape">#000</Color>
             <Color x:Key="ButtonBackgroundColor">#0E76BC</Color>
-            
+            <Color x:Key="BackgroundColor">#393838</Color>
+            <Color x:Key="EntryBackgroundColor">#7E7E7E</Color>
+            <Color x:Key="PlaceholderColor">#CDCDCD</Color>
+            <Color x:Key="Textcolor">#E7FAF7</Color>
+
+
             <!-- Dark Theme -->
             <Color x:Key="BackgroundColorDark">#393838</Color>
             <Color x:Key="EntryBackgroundColorDark">#7E7E7E</Color>
