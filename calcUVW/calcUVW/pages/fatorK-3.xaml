@@ -90,17 +90,46 @@
                         ReturnType="Next"
 			        />
                 </pancake:PancakeView>
-                <StackLayout Padding="-20, 0, -20, 0">
-                    <pancake:PancakeView BackgroundColor="{StaticResource EntryBackgroundColorDark}" Margin="0, 10, 0, 0">
-                        <Label x:Name="label_result"
-                                 FontFamily="Arial"
-                                 Padding="22, 20, 10, 20"
-			                     FontSize="24"
-			                     TextColor="{StaticResource TextcolorDark}"
-                                 Text="Fator K:"
-                        />
-                    </pancake:PancakeView>
-                </StackLayout>
+
+                <FlexLayout>
+                    <Label x:Name="label_ang1"
+                        FontFamily="Arial"
+				        FontSize="22"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Angulo 1:"    
+                        Padding="0,10"
+                    />
+
+                    <Entry x:Name="ang1"     
+                         Margin="3"
+                         BackgroundColor="{StaticResource EntryBackgroundColorDark}" 
+                         PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                         Placeholder="0"
+                         MaxLength="10"
+                         Keyboard="Numeric"
+                         HorizontalOptions="Center"
+
+                     />
+                    <Label x:Name="label_ang2"
+                        FontFamily="Arial"
+				        FontSize="22"
+				        TextColor="{StaticResource TextcolorDark}"
+				        Text="Angulo 2:"    
+                        Padding="0,10"
+                    />
+                    <Entry x:Name="ang2"     
+                         Margin="3"
+                         BackgroundColor="{StaticResource EntryBackgroundColorDark}" 
+                         PlaceholderColor="{StaticResource PlaceholderColorDark}"
+                         Placeholder="0"
+                         MaxLength="10"
+                         Keyboard="Numeric"
+                         HorizontalOptions="Fill"
+                           
+                     />
+                </FlexLayout>
+                
+         
             </StackLayout>
             <Button x:Name="Calcular"
 			    CornerRadius="20"
