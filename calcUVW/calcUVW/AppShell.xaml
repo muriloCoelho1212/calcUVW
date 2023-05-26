@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.AppShell"
              xmlns:local="clr-namespace:calcUVW.pages"
-             FlyoutBackgroundColor="#393838">
+             FlyoutBackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}">
 
     <Shell.Resources>
-        <ResourceDictionary x:Key="DarkTheme">
-            <Style x:Key="StandardStyleDark" TargetType="Element">
-                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColorDark}"/>
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CabecalhoRodape}"/>
+        <ResourceDictionary>
+            <Style x:Key="StandardStyle" TargetType="Element">
+                <Setter Property="Shell.FlyoutBackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}"/>
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource CabecalhoRodapeDark}, Light={StaticResource CabecalhoRodapeLight}}"/>
             </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyleDark}"/>
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyleDark}"/>
+            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyle}"/>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyle}"/>
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource TextcolorDark}"></Setter>
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -22,43 +22,13 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorDark}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource TextcolorDark}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource CabecalhoRodape}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
-            </Style>
-        </ResourceDictionary>
-        <ResourceDictionary x:Key="LightTheme">
-            <Style x:Key="StandardStyleLight" TargetType="Element">
-                <Setter Property="Shell.FlyoutBackgroundColor" Value="{StaticResource BackgroundColorLight}"/>
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CabecalhoRodape}"/>
-            </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource StandardStyleLight}"/>
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource StandardStyleLight}"/>
-            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource TextcolorLight}"></Setter>
-            </Style>
-            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorLight}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource TextcolorLight}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Selected">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource CabecalhoRodape}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource CabecalhoRodapeDark}, Light={StaticResource CabecalhoRodapeLight}}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>

@@ -4,24 +4,23 @@
              x:Class="calcUVW.pages.ajudaRA">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="#393838">
+            <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}">
 
                 <!--ajuda  Diâmetro da feramenta-->
-                
+
                 <Label x:Name="TitleDiam"
                     FontFamily="Arial"
                     FontAttributes="Bold"
                     Padding="10,0"
-		            TextColor="#FFFFFF"
+		            TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                     Text="Diâmetro da feramenta:"
                 />
 
-
-            <Label x:Name="textAjudaDiam"
+                <Label x:Name="textAjudaDiam"
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="Digite o o diâmetro da ferramenta utilizada para o processo."
             />
 
@@ -30,7 +29,7 @@
                    <Label x:Name="TitleAE"
                      FontFamily="Arial"
                      FontAttributes="Bold"
-		             TextColor="#FFFFFF"
+		             TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                      Padding="10,0"
                      Text="Passo lateral (ae):"
                   />
@@ -39,7 +38,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text= "Informe o passe lateral de sua ferramenta em milímetros." 
              />
 
@@ -49,7 +48,7 @@
                    FontFamily="Arial"
                    FontAttributes="Bold"
                    Padding="10,0"
-		           TextColor="#FFFFFF"
+		           TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                    Text="Altura de Crista:"
                 />
 
@@ -58,7 +57,7 @@
 		        FontFamily="Arial"
 		        FontSize="16"
                 Padding="10"
-		        TextColor="#FFFFFF"
+		        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                 Text="Será feito o calculo para descobrir sua altura de crista com sua ferramenta e passe lateral."
               />
 
@@ -68,7 +67,7 @@
                        FontFamily="Arial"
                        FontAttributes="Bold"
                        Padding="10,0"
-		               TextColor="#FFFFFF"
+		               TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                        Text="Rugosidade Ra aproximada:"
                     />
 
@@ -76,7 +75,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="Será exibido sua Rugosidade Aritmética Principal aproximada. Pois pode variar em relação ao seu processo e geometria."/>
 
                 <!--ajuda  Tipo de Superfície -->
@@ -85,7 +84,7 @@
                       FontFamily="Arial"
                       FontAttributes="Bold"
                       Padding="10,0"
-		              TextColor="#FFFFFF"
+		              TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                       Text="Tipo de Superfície:"
                     />
 
@@ -94,7 +93,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF" 
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}" 
               Text= "É exibido o tipo de superfície que irá ficar a usinagem com os dados da Rugosidade Ra aproximada." />
 
                 <!--ajuda  Diâmetro da calota esférica -->
@@ -103,7 +102,7 @@
                       FontAttributes="Bold"
                       FontFamily="Arial"
                       Padding="10,0"
-		              TextColor="#FFFFFF"
+		              TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                       Text="Diâmetro da calota esférica:"
                     />
 
@@ -111,7 +110,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="Faz o cálculo da correção de diâmetro e correção da rotação por minuto no contato efetivo da ferramenta esférica, de acordo com sua profundidade de usinagem."
             />
 
@@ -121,7 +120,7 @@
                       FontFamily="Arial"
                       FontAttributes="Bold"
                       Padding="10,0"
-		              TextColor="#FFFFFF"
+		              TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                       Text="Diâmetro da fresa esférica:"
                     />
 
@@ -129,7 +128,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                Text=" Diâmetro da fresa esférica: É o valor do diâmetro externo da ferramenta utilizada no processo."
             />
 
@@ -139,7 +138,7 @@
                         FontFamily="Arial"
                         FontAttributes="Bold"
                         Padding="10,0"
-		                TextColor="#FFFFFF"
+		                TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         Text="Profundidade de corte:"
                      />
 
@@ -147,7 +146,7 @@
 		     FontFamily="Arial"
 		     FontSize="16"
              Padding="10"
-		     TextColor="#FFFFFF"
+		     TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
              Text="É o valor de profundidade de corte utilizada para a ferramenta."
             />
 
@@ -157,7 +156,7 @@
                          FontFamily="Arial"
                          FontAttributes="Bold"
                          Padding="10,0"
-		                 TextColor="#FFFFFF"
+		                 TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                          Text="RPM No diâmetro externo:"
                        />
 
@@ -165,7 +164,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="É a rotação por minuto calculado com o diâmetro externo."/>
 
                 <!--  ajuda Diametro Calota -->
@@ -174,7 +173,7 @@
                       FontFamily="Arial"
                       Padding="10,0"
                       FontAttributes="Bold"
-		              TextColor="#FFFFFF"
+		              TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                       Text="Diâmetro da calota:"
                     />
 
@@ -182,7 +181,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                Text="É o valor calculado do diâmetro efetivo de usinagem utilizando o diâmetro externo (De) declarado, de acordo com a profundidade (ap)."/>
 
                 <!--ajuda Correção RPM -->
@@ -191,7 +190,7 @@
                        FontFamily="Arial"
                        FontAttributes="Bold"
                        Padding="10,0"
-		               TextColor="#FFFFFF"
+		               TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                        Text="Correção do RPM para calota:"
                      />
 
@@ -199,7 +198,7 @@
 		      FontFamily="Arial"
 		      FontSize="16"
               Padding="10"
-		      TextColor="#FFFFFF"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="É o valor calculado para correção da rotação por minuto utilizado para usinagem com o diâmetro efetivo."
              />
 

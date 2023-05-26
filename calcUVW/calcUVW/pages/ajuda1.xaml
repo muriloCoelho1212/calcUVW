@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.pages.ajuda1">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{StaticResource BackgroundColor}">
+        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}">
             <Label x:Name="textAjuda"
 		      FontFamily="Arial"
 		      FontSize="24"
               Padding="20"
-		      TextColor="{StaticResource Textcolor}"
+		      TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
               Text="Recorte um blank retangular com o material e espessura que você irá trabalhar com as dobras. Faça a medição do comprimento deste blank e coloque o valor no campo L da página."
               />
             <Image x:Name="img1"

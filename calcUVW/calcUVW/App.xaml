@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary x:Name="colors">
             <!-- Global -->
             <Color x:Key="CabecalhoRodape">#000</Color>
             <Color x:Key="ButtonBackgroundColor">#0E76BC</Color>
@@ -18,13 +18,15 @@
             <Color x:Key="EntryBackgroundColorDark">#7E7E7E</Color>
             <Color x:Key="PlaceholderColorDark">#CDCDCD</Color>
             <Color x:Key="TextcolorDark">#E7FAF7</Color>
-            
+            <Color x:Key="CabecalhoRodapeDark">#000</Color>
+
             <!-- Light Theme -->
 
             <Color x:Key="BackgroundColorLight">#EFEFEF</Color>
             <Color x:Key="EntryBackgroundColorLight">#E7FBF7</Color>
             <Color x:Key="PlaceholderColorLight">#818285</Color>
             <Color x:Key="TextcolorLight">#1B1B1B</Color>
+            <Color x:Key="CabecalhoRodapeLight">#A2AAA8</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

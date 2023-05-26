@@ -11,7 +11,7 @@ namespace calcUVW
         {
             InitializeComponent();
 
-            MainPage = new fatorK_3();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()
