@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="calcUVW.App">
+             x:Class="calcUVW.App"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <Application.Resources>
         <ResourceDictionary x:Name="colors">
             <!-- Global -->
@@ -11,7 +12,6 @@
             <Color x:Key="EntryBackgroundColor">#7E7E7E</Color>
             <Color x:Key="PlaceholderColor">#CDCDCD</Color>
             <Color x:Key="Textcolor">#E7FAF7</Color>
-
 
             <!-- Dark Theme -->
             <Color x:Key="BackgroundColorDark">#393838</Color>
@@ -27,6 +27,23 @@
             <Color x:Key="PlaceholderColorLight">#818285</Color>
             <Color x:Key="TextcolorLight">#1B1B1B</Color>
             <Color x:Key="CabecalhoRodapeLight">#A2AAA8</Color>
+
+            <Style TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}"/>
+            </Style>
+            <Style TargetType="pancake:PancakeView">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}" />
+            </Style>
+            <Style TargetType="CheckBox">
+                <Setter Property="Color" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

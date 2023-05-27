@@ -7,23 +7,20 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ajuda2_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}">
+        <StackLayout>
             <StackLayout Padding="20, 30">
                 <Label x:Name="label_C"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 				        Text="Comprimento da peça:"
                        Padding="0, 10"
                     />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="C"
-                        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                         MaxLength="10"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
@@ -32,18 +29,15 @@
                 <Label x:Name="label_alturaA"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 				        Text="Altura do lado A:"    
                             Padding="0, 10"
                     />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="ladoA"
-                        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                         MaxLength="10"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
@@ -52,18 +46,15 @@
                 <Label x:Name="label_alturaB"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 				        Text="Altura do lado B:"    
                        Padding="0, 10"
                     />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="ladoB"
-                        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                         MaxLength="10"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
@@ -72,30 +63,26 @@
                 <Label x:Name="label_raio_dobra"
 				        FontFamily="Arial"
 				        FontSize="24"
-				        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 				        Text="Raio da dobra:"    
                         Padding="0, 10"
                     />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="raio_dobra"
-                        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                         MaxLength="10"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
                 </pancake:PancakeView>
                 <StackLayout Padding="-20, 0, -20, 0">
-                    <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" Margin="0, 10, 0, 0">
+                    <pancake:PancakeView Margin="0, 10, 0, 0">
                         <Label x:Name="label_result"
                                  FontFamily="Arial"
                                  Padding="22, 20, 10, 20"
 			                     FontSize="24"
-			                     TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                                  Text="Fator K:"
                         />
                     </pancake:PancakeView>

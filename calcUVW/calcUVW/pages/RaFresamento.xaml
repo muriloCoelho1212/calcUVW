@@ -7,24 +7,21 @@
         <ToolbarItem   IconImageSource="ajuda.png" Clicked="ajudaRA_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}" Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
             <StackLayout Padding="20,30">
 
                 <Label x:Name="labelFerramenta"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 						Text="Diâmetro da Ferramenta:"
                         Padding="0, 10"
 						 />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                 <Entry x:Name="DeEntry"
-					   TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
                        Placeholder="0"
-                       PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                        MaxLength="10"
                        ClearButtonVisibility="WhileEditing"
                        ReturnType="Next"/>
@@ -33,18 +30,15 @@
                 <Label x:Name="labelPassLat"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 						Text="Passo lateral (ae):"
                         Padding="0, 10"
 						 />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                 <Entry x:Name="AEEntry"
-						TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 						FontFamily="Arial"
 						FontSize="24"
 						Keyboard="Numeric"
 						Placeholder="0"
-						PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
 						MaxLength="10"
 						ClearButtonVisibility="WhileEditing"
 						ReturnType="Next"
@@ -52,11 +46,10 @@
                 </pancake:PancakeView>
 
                 <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" Margin="0, 10, 0, 0">
+                    <pancake:PancakeView Margin="0, 10, 0, 0">
                         <Label x:Name="Hcvalor"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 							   Text="Altura da Crista: "
 							   Padding="22, 20, 10, 20"
                         />
@@ -64,22 +57,20 @@
                 </StackLayout>
 
                 <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" Margin="0, 10, 0, 0">
+                    <pancake:PancakeView Margin="0, 10, 0, 0">
                         <Label x:Name="Ravalor"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 							   Text="Rug. RA aproximada: "
 							   Padding="22, 20, 10, 20"
 						/>
                     </pancake:PancakeView>
                 </StackLayout>
                 <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" Margin="0, 10, 0, 0">
+                    <pancake:PancakeView Margin="0, 10, 0, 0">
                         <Label x:Name="Anali"
 							   FontFamily="Arial"
 							   FontSize="24"
-							   TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 							   Padding="22, 20, 10, 20"
 							   Text="Tipo da superfície: "
 						/>

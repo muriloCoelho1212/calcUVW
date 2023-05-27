@@ -7,23 +7,20 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ajuda_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}" Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
             <StackLayout Padding="20, 30">
                 <Label x:Name="labelBlank"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 						Text="Comprimento do Blank:"
                        Padding="0, 10"
                 />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="compBlank"
-                           TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                            FontFamily="Arial"
                            FontSize="24"
                            Keyboard="Numeric"
                            Placeholder="0"
-                           PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                            MaxLength="10"
                            ClearButtonVisibility="WhileEditing"
                            ReturnType="Next"
@@ -32,18 +29,15 @@
                 <Label x:Name="labelChapa"
 						FontFamily="Arial"
 						FontSize="24"
-						TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
 						Text="Espessura da chapa:"
                        Padding="0, 10"
 			    />
-                <pancake:PancakeView BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}" CornerRadius="25" Padding="5">
+                <pancake:PancakeView CornerRadius="25" Padding="5">
                     <Entry x:Name="espessChapa"
-                       TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
                        Placeholder="0"
-                       PlaceholderColor="{AppThemeBinding Dark={StaticResource PlaceholderColorDark}, Light={StaticResource PlaceholderColorLight}}"
                        MaxLength="10"
                        ClearButtonVisibility="WhileEditing"
                 />
@@ -51,14 +45,12 @@
                 <StackLayout Orientation="Horizontal" Padding="0, 20">
                     <CheckBox 
                         x:Name="angRandom"
-                        Color="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         ScaleX="1.8"
                         ScaleY="1.8"
                     />
                     <Label
                         Text="Ângulo aleatório?"
                         VerticalOptions="Center"
-                        TextColor="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"
                         FontSize="24"
                         Padding="10"
                     />

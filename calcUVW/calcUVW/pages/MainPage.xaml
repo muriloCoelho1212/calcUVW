@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.pages.MainPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}">
+        <StackLayout >
 
             <Image x:Name="logo_uvw"
 				Source="logoUVW.png"/>
