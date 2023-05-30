@@ -50,5 +50,5 @@
     <FlyoutItem Title="Calota Esférica">
         <ShellContent Route="CalEsf" ContentTemplate="{DataTemplate local:CalEsf}"/>
     </FlyoutItem>
-    <ShellContent  />
+    <ToolbarItem Text="Tema" IconImageSource="sol.png" Clicked="themeChanged_Clicked"/>
 </Shell>

@@ -24,7 +24,14 @@ namespace calcUVW.pages
 
         private async void btnProxEtapa_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("fatorK_2");
+            if (angRandom.IsChecked == true)
+            {
+                await Shell.Current.GoToAsync("fatorK_3");
+            }
+            else
+            {
+                await Shell.Current.GoToAsync("fatorK_2");
+            }
         }
     }
 }
