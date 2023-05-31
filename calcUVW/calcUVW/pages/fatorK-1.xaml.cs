@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using calcUVW.code;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,6 +24,9 @@ namespace calcUVW.pages
 
         private async void btnProxEtapa_Clicked(object sender, EventArgs e)
         {
+            varFatorK.Lv = Convert.ToDouble(compBlank.Text);
+            varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
+
             if (angRandom.IsChecked == true)
             {
                 await Shell.Current.GoToAsync("fatorK_3");

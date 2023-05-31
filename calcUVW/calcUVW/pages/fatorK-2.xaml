@@ -101,6 +101,8 @@
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
+                            VerticalOptions="Center"
+                            Padding="10"
                             BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
                     </pancake:PancakeView>
@@ -119,6 +121,7 @@
                 VerticalOptions="EndAndExpand"
                 Padding="20"
                 Margin="10, -20, 10, 10"
+                Clicked="Calcular_Clicked"
             />
         </StackLayout>
     </ContentPage.Content>

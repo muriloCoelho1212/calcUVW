@@ -25,8 +25,8 @@ namespace calcUVW.pages
 
         private void raCalc()
         {
-            string DeText = DeEntry.Text;
-            string AEText = AEEntry.Text;
+            double De = Convert.ToDouble(DeEntry.Text);
+            double AE = Convert.ToDouble(AEEntry.Text);
             double Hc;
             double Ra;
             double R;
@@ -35,9 +35,6 @@ namespace calcUVW.pages
 
             // Retorna 0 se for ponto
             // Retorna 1 se for vírgula
-
-            double De = Convert.ToDouble(DeText);
-            double AE = Convert.ToDouble(AEText);
 
             R = De / 2;
 

@@ -9,17 +9,17 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Padding="20, 30">
+            <StackLayout Padding="20, 10">
                 <Label x:Name="label_C"
 				        FontFamily="Arial"
-				        FontSize="24"
+				        FontSize="18"
 				        Text="Comprimento da peça:"
                        Padding="0, 10"
                     />
                 <pancake:PancakeView CornerRadius="24" Padding="5">
                     <Entry x:Name="C"
                         FontFamily="Arial"
-                        FontSize="24"
+                        FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
                         MaxLength="10"
@@ -29,14 +29,14 @@
                 </pancake:PancakeView>
                 <Label x:Name="label_alturaA"
 				        FontFamily="Arial"
-				        FontSize="24"
+				        FontSize="18"
 				        Text="Altura do lado A:"    
                         Padding="0, 10"
                     />
                 <pancake:PancakeView CornerRadius="24" Padding="5">
                     <Entry x:Name="ladoA"
                         FontFamily="Arial"
-                        FontSize="24"
+                        FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
                         MaxLength="10"
@@ -46,14 +46,14 @@
                 </pancake:PancakeView>
                 <Label x:Name="label_alturaB"
 				        FontFamily="Arial"
-				        FontSize="24"
+				        FontSize="18"
 				        Text="Altura do lado B:"    
                        Padding="0, 10"
                     />
                 <pancake:PancakeView CornerRadius="24" Padding="5">
                     <Entry x:Name="ladoB"
                         FontFamily="Arial"
-                        FontSize="24"
+                        FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
                         MaxLength="10"
@@ -63,14 +63,14 @@
                 </pancake:PancakeView>
                 <Label x:Name="label_raio_dobra"
 				        FontFamily="Arial"
-				        FontSize="24"
+				        FontSize="18"
 				        Text="Raio da dobra:"    
                         Padding="0, 10"
                     />
                 <pancake:PancakeView CornerRadius="24" Padding="5">
                     <Entry x:Name="raio_dobra"
                         FontFamily="Arial"
-                        FontSize="24"
+                        FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
                         MaxLength="10"
@@ -81,6 +81,7 @@
                 <Grid Padding="0, 10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -97,13 +98,13 @@
                         Grid.Row="0"
                         Grid.Column="0"
                     />
-                    <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="1" Margin="0, 10">
+                    <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="1" Margin="4, 10">
                         <Entry x:Name="ent_ang1"
                         FontFamily="Arial"
                         FontSize="18"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="55"
+                        MaxLength="5"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
@@ -116,7 +117,7 @@
                         Grid.Row="0"
                         Grid.Column="2"
                     />
-                    <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="3" Margin="0, 10">
+                    <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="3" Margin="4, 10">
                         <Entry x:Name="ent_ang2"
                         FontFamily="Arial"
                         FontSize="18"
@@ -127,8 +128,26 @@
                         ReturnType="Next"
 			        />
                     </pancake:PancakeView>
+                    <Label x:Name="label_result"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        FontFamily="Arial"
+                        VerticalOptions="Center"
+                        Padding="0, 16"
+			            FontSize="18"
+                        Text="Fator K:"
+                    />
+                    <pancake:PancakeView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                        <Label x:Name="result"
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            VerticalOptions="Center"
+                            Padding="16"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
+                        />
+                    </pancake:PancakeView>
                 </Grid>
-
 
             </StackLayout>
             <Button x:Name="Calcular"
@@ -144,6 +163,7 @@
                 VerticalOptions="EndAndExpand"
                 Padding="20"
                 Margin="10, -30, 10, 10"
+                    Clicked="Calcular_Clicked"
             />
         </StackLayout>
     </ContentPage.Content>
