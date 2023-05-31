@@ -77,16 +77,34 @@
                         ReturnType="Next"
 			        />
                 </pancake:PancakeView>
-                <StackLayout Padding="-20, 0, -20, 0">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
-                        <Label x:Name="label_result"
-                                 FontFamily="Arial"
-                                 Padding="22, 20, 10, 20"
-			                     FontSize="24"
-                                 Text="Fator K:"
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="label_result"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontFamily="Arial"
+                        Padding="0, 16"
+			            FontSize="24"
+                        Text="Fator K:"
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                        <Label x:Name="result"
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
                     </pancake:PancakeView>
-                </StackLayout>
+                </Grid>
             </StackLayout>
             <Button x:Name="Calcular"
 			    CornerRadius="20"

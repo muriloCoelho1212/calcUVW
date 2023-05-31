@@ -21,11 +21,8 @@ namespace calcUVW
             Routing.RegisterRoute(nameof(ajuda1), typeof(ajuda1));
             Routing.RegisterRoute(nameof(fatorK_3), typeof(fatorK_3));
         }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
-        private bool themeDark = false;
+
+        private bool themeDark = true;
 
         private void themeChanged_Clicked(object sender, EventArgs e)
         {
@@ -37,8 +34,15 @@ namespace calcUVW
             {
                 Application.Current.UserAppTheme = OSAppTheme.Dark;
             }
-
             themeDark = !themeDark;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if(themeDark == true)
+            {
+                Preferences.Get("tema", themeDark);
+            }
         }
     }
 }

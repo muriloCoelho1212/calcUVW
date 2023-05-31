@@ -89,7 +89,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Label x:Name="label_raio_dobra"
+                    <Label x:Name="lbl_ang1"
 				        FontFamily="Arial"
 				        FontSize="18"
 				        Text="Ângulo 1:"    
@@ -98,17 +98,17 @@
                         Grid.Column="0"
                     />
                     <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="1" Margin="0, 10">
-                        <Entry x:Name="raio_dobra"
+                        <Entry x:Name="ent_ang1"
                         FontFamily="Arial"
                         FontSize="18"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="5"
+                        MaxLength="55"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
                     </pancake:PancakeView>                    
-                    <Label x:Name="label_raio_dobra"
+                    <Label x:Name="lbl_ang2"
 				        FontFamily="Arial"
 				        FontSize="18"
 				        Text="Ângulo 2:"    
@@ -117,7 +117,7 @@
                         Grid.Column="2"
                     />
                     <pancake:PancakeView CornerRadius="24" Padding="5" Grid.Row="0" Grid.Column="3" Margin="0, 10">
-                        <Entry x:Name="raio_dobra"
+                        <Entry x:Name="ent_ang2"
                         FontFamily="Arial"
                         FontSize="18"
                         Keyboard="Numeric"
