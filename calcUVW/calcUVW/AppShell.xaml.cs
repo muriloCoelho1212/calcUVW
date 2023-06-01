@@ -29,20 +29,18 @@ namespace calcUVW
             if (themeDark)
             {
                 Application.Current.UserAppTheme = OSAppTheme.Light;
+                //Application.Current.Properties.Add("themeLight", OSAppTheme.Light);
             }
             else
             {
                 Application.Current.UserAppTheme = OSAppTheme.Dark;
+                //Application.Current.Properties.Add("themeDark", OSAppTheme.Dark);
             }
             themeDark = !themeDark;
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if(themeDark == true)
-            {
-                Preferences.Get("tema", themeDark);
-            }
         }
     }
 }

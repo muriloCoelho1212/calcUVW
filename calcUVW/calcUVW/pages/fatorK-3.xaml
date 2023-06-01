@@ -163,7 +163,7 @@
                 VerticalOptions="EndAndExpand"
                 Padding="20"
                 Margin="10, -30, 10, 10"
-                    Clicked="Calcular_Clicked"
+                Clicked="Calcular_Clicked"
             />
         </StackLayout>
     </ContentPage.Content>
