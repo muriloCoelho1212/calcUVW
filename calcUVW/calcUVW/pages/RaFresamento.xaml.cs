@@ -31,11 +31,6 @@ namespace calcUVW.pages
             double Ra;
             double R;
 
-            // identifica se o Windows esta usando ponto ou virgula
-
-            // Retorna 0 se for ponto
-            // Retorna 1 se for vírgula
-
             R = De / 2;
 
             if (De >= AE)

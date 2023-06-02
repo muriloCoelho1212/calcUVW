@@ -22,7 +22,7 @@
                         FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="10"
+                        MaxLength="7"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
@@ -39,7 +39,7 @@
                         FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="10"
+                        MaxLength="7"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
@@ -56,7 +56,7 @@
                         FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="10"
+                        MaxLength="7"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
@@ -73,7 +73,7 @@
                         FontSize="20"
                         Keyboard="Numeric"
                         Placeholder="0"
-                        MaxLength="10"
+                        MaxLength="7"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />

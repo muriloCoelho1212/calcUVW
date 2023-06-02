@@ -38,7 +38,7 @@ namespace calcUVW.pages
                 NRPM = vc * 1000 / (D * 3.14159265);
 
                 calResult.Text = D.ToString("N3");
-                rpmResult.Text = NRPM.ToString();
+                rpmResult.Text = NRPM.ToString("N3");
             }
             else
             {
