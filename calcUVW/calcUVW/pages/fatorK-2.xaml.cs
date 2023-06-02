@@ -46,8 +46,7 @@ namespace calcUVW.pages
 
             K = (((blank1raio * 2) / piv) - Rv) / Espv;
 
-            result.Text = Convert.ToString(K);
-            result.Text = result.Text.Substring(0, 4);
+            result.Text = K.ToString("N5");
         }
     }
 }
