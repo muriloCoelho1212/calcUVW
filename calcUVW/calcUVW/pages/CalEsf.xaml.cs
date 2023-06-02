@@ -35,7 +35,7 @@ namespace calcUVW.pages
 
                 D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0);
 
-                NRPM = vc * 1000 / (D * 3.14159265);
+                NRPM = vc * 1000 / (D * 3.14159265); 
 
                 calResult.Text = D.ToString("N3");
                 rpmResult.Text = NRPM.ToString("N3");
