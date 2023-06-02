@@ -17,15 +17,40 @@ namespace calcUVW.pages
             InitializeComponent();
         }
 
-        private void calcular_Clicked(object sender, EventArgs e)
+        private void CalEsfCalc()
         {
-            double De;
+            double De = Convert.ToDouble(DiamtroFe.Text);
             double D;
-            double ap;
-            double RPM;
+            double ap = Convert.ToDouble(ProfCorte.Text);
+            double RPM = Convert.ToDouble(diamRpm.Text);
             double NRPM;
             double R;
             double vc;
+
+            R = De / 2;
+
+            if (ap < R)
+            {
+                vc = RPM * De * 3.14159265 / 1000;
+
+                D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0);
+
+                NRPM = vc * 1000 / (D * 3.14159265);
+
+                calResult.Text = D.ToString("N3");
+                rpmResult.Text = NRPM.ToString();
+            }
+            else
+            {
+                calResult.Text = De.ToString();
+                rpmResult.Text = ((double)Convert.ToDouble(diamRpm.Text)).ToString();
+            }
+        }
+        private void calcular_Clicked(object sender, EventArgs e)
+        {
+            calResult.Text = "";
+            rpmResult.Text = "";
+            CalEsfCalc();
         }
     }
 }
