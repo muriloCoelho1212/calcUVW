@@ -61,26 +61,66 @@
                        ReturnType="Next"/>
                 </pancake:PancakeView>
 
-                <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
-                        <Label x:Name="labelCal"
-						       FontFamily="Arial"
-						       FontSize="24"
-						       Text="Diâmetro da calota:"
-                               Padding="22, 20, 10, 20"
-					    />
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="labelCal"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontFamily="Arial"
+                        Padding="0, 16"
+			            FontSize="24"
+                        Text="Diâmetro: "
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                        <Label x:Name="calResult"
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            VerticalOptions="Center"
+                            Padding="10"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
+                        />
+                    </pancake:PancakeView>                    
+                </Grid>
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="lblRpm" 
+                        FontFamily="Arial"
+                        FontSize="24"
+                        Text="Correção do RPM: "
+                        Padding="0, 16"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                        <Label x:Name="rpmResult"
+                               FontFamily="Arial"
+                               FontSize="24"
+                               Text=""
+                               VerticalOptions="Center"
+                               Padding="10"
+                               BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
+                        />
                     </pancake:PancakeView>
-                </StackLayout>
-                <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
-                        <Label x:Name="labelRpmCal"
-						       FontFamily="Arial"
-						       FontSize="24"
-						       Text="Correção do RPM para a calota:"
-                               Padding="22, 20, 10, 20"
-					    />
-                    </pancake:PancakeView>
-                </StackLayout>
+                </Grid>
             </StackLayout>
             <Button x:Name="calcular"
 			        CornerRadius="20"
@@ -95,6 +135,7 @@
                     VerticalOptions="EndAndExpand"
                     Padding="20"
                     Margin="10, -30, 10, 10"
+                    Clicked="calcular_Clicked"
             />
         </StackLayout>
     </ContentPage.Content>

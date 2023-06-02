@@ -84,7 +84,5 @@ namespace calcUVW.pages
             Anali.Text = Anali.Text.Substring(0, 20);
             raCalc();
         }
-
-     
     }
 }

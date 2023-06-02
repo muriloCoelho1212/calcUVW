@@ -8,7 +8,7 @@
             <Image x:Name="logo_uvw"
 				Source="logoUVW.png"/>
 
-            <StackLayout Orientation="Vertical" Spacing="60" Padding="40">
+            <StackLayout Orientation="Vertical" Spacing="64" Padding="40">
                 <Button x:Name="fatork"
 				        CornerRadius="20"
 				        BackgroundColor="{StaticResource ButtonBackgroundColor}"

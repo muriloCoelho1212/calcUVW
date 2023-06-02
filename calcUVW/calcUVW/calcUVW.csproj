@@ -11,7 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="theme.cs" />
+    <Compile Remove="code\Settings.cs" />
+    <Compile Remove="code\SettingsTheme.cs" />
+    <Compile Remove="code\theme.cs" />
   </ItemGroup>
 
   <ItemGroup>

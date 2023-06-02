@@ -16,5 +16,16 @@ namespace calcUVW.pages
         {
             InitializeComponent();
         }
+
+        private void calcular_Clicked(object sender, EventArgs e)
+        {
+            double De;
+            double D;
+            double ap;
+            double RPM;
+            double NRPM;
+            double R;
+            double vc;
+        }
     }
 }

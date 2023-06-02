@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using calcUVW.code;
 using calcUVW.pages;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -22,25 +23,23 @@ namespace calcUVW
             Routing.RegisterRoute(nameof(fatorK_3), typeof(fatorK_3));
         }
 
-        private bool themeDark = true;
+        private bool changeTheme = true;
 
-        private void themeChanged_Clicked(object sender, EventArgs e)
-        {
-            if (themeDark)
-            {
-                Application.Current.UserAppTheme = OSAppTheme.Light;
-                //Application.Current.Properties.Add("themeLight", OSAppTheme.Light);
-            }
-            else
-            {
-                Application.Current.UserAppTheme = OSAppTheme.Dark;
-                //Application.Current.Properties.Add("themeDark", OSAppTheme.Dark);
-            }
-            themeDark = !themeDark;
-        }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
+        //private void themeChanged_Toggled(object sender, EventArgs e)
+        //{
+        //    if (e.value)
+        //    {
+        //        App.Current.UserAppTheme = OSAppTheme.Dark;
+        //    }
+        //    else
+        //    {
+        //        App.Current.UserAppTheme = OSAppTheme.Light;
+        //    }
+        //    }
+        //}
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //}
     }
 }
