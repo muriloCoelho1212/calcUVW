@@ -52,5 +52,10 @@ namespace calcUVW.pages
             rpmResult.Text = "";
             CalEsfCalc();
         }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ajudaCAL(), true);
+        }
     }
 }

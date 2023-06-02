@@ -3,46 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcUVW.pages.ajudaRA">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
+        <StackLayout HorizontalOptions="Center">
 
-                <!--ajuda  Diâmetro da feramenta-->
+            <!--ajuda  Diâmetro da feramenta-->
 
-                <Label x:Name="TitleDiam"
+            <Label x:Name="TitleDiam"
                     FontFamily="Arial"
                     FontAttributes="Bold"
                     Padding="10,0"
+                    FontSize="20"
                     Text="Diâmetro da feramenta:"
                 />
 
-                <Label x:Name="textAjudaDiam"
+            <Label x:Name="textAjudaDiam"
 		      FontFamily="Arial"
-		      FontSize="16"
+		      FontSize="17"
               Padding="10"
               Text="Digite o o diâmetro da ferramenta utilizada para o processo."
             />
 
-                <!--ajuda  Passo Lateral-->
-    
-                   <Label x:Name="TitleAE"
+            <!--ajuda  Passo Lateral-->
+
+            <Label x:Name="TitleAE"
                      FontFamily="Arial"
                      FontAttributes="Bold"
+                          FontSize="20"
                      Padding="10,0"
                      Text="Passo lateral (ae):"
+                          
                   />
 
             <Label x:Name="textAjudaAE"
 		      FontFamily="Arial"
-		      FontSize="16"
+		      FontSize="17"
               Padding="10"
               Text= "Informe o passe lateral de sua ferramenta em milímetros." 
              />
 
-                <!--ajuda  Altura de Crista: -->
+            <!--ajuda  Altura de Crista: -->
 
-                <Label x:Name="TitleCrista"
+            <Label x:Name="TitleCrista"
                    FontFamily="Arial"
                    FontAttributes="Bold"
+                       FontSize="17"
                    Padding="10,0"
                    Text="Altura de Crista:"
                 />
@@ -50,15 +53,16 @@
 
             <Label x:Name="textAjudaCrista"
 		        FontFamily="Arial"
-		        FontSize="16"
+		        FontSize="17"
                 Padding="10"
                 Text="Será feito o calculo para descobrir sua altura de crista com sua ferramenta e passe lateral."
               />
 
-                <!--ajuda  Rgosidade RA Aproximada-->
-                
-                    <Label x:Name="TitleRA"
+            <!--ajuda  Rgosidade RA Aproximada-->
+
+            <Label x:Name="TitleRA"
                        FontFamily="Arial"
+                           FontSize="20"
                        FontAttributes="Bold"
                        Padding="10,0"
                        Text="Rugosidade Ra aproximada:"
@@ -66,15 +70,16 @@
 
             <Label x:Name="textAjuda"
 		      FontFamily="Arial"
-		      FontSize="16"
+		      FontSize="17"
               Padding="10"
               Text="Será exibido sua Rugosidade Aritmética Principal aproximada. Pois pode variar em relação ao seu processo e geometria."/>
 
-                <!--ajuda  Tipo de Superfície -->
+            <!--ajuda  Tipo de Superfície -->
 
-                    <Label x:Name="TitleSuperficie"
+            <Label x:Name="TitleSuperficie"
                       FontFamily="Arial"
                       FontAttributes="Bold"
+                           FontSize="20"
                       Padding="10,0"
                       Text="Tipo de Superfície:"
                     />
@@ -82,106 +87,10 @@
 
             <Label x:Name="textAjudaSuperficie"
 		      FontFamily="Arial"
-		      FontSize="16"
+		      FontSize="17"
               Padding="10"
-              Text= "É exibido o tipo de superfície que irá ficar a usinagem com os dados da Rugosidade Ra aproximada." />
-
-                <!--ajuda  Diâmetro da calota esférica -->
-                
-                    <Label x:Name="TitleCalota"
-                      FontAttributes="Bold"
-                      FontFamily="Arial"
-                      Padding="10,0"
-                      Text="Diâmetro da calota esférica:"
-                    />
-
-            <Label x:Name="textAjudaCalota"
-		      FontFamily="Arial"
-		      FontSize="16"
-              Padding="10"
-              Text="Faz o cálculo da correção de diâmetro e correção da rotação por minuto no contato efetivo da ferramenta esférica, de acordo com sua profundidade de usinagem."
-            />
-
-                <!--ajuda  Diâmetro da fresa esférica -->
-                
-                    <Label x:Name="TitleDiamFresa"
-                      FontFamily="Arial"
-                      FontAttributes="Bold"
-                      Padding="10,0"
-                      Text="Diâmetro da fresa esférica:"
-                    />
-
-            <Label x:Name="textAjudaFresa"
-		      FontFamily="Arial"
-		      FontSize="16"
-              Padding="10"
-               Text=" Diâmetro da fresa esférica: É o valor do diâmetro externo da ferramenta utilizada no processo."
-            />
-
-                <!--ajuda Profundidade de Corte -->
-                
-                      <Label x:Name="TitleCorte"
-                        FontFamily="Arial"
-                        FontAttributes="Bold"
-                        Padding="10,0"
-                        Text="Profundidade de corte:"
-                     />
-
-            <Label x:Name="textAjudaCorte"
-		     FontFamily="Arial"
-		     FontSize="16"
-             Padding="10"
-             Text="É o valor de profundidade de corte utilizada para a ferramenta."
-            />
-
-                <!--ajuda RPM Externo -->
-                
-                       <Label x:Name="TitleRPM"
-                         FontFamily="Arial"
-                         FontAttributes="Bold"
-                         Padding="10,0"
-                         Text="RPM No diâmetro externo:"
-                       />
-
-            <Label x:Name="textAjudaRPM"
-		      FontFamily="Arial"
-		      FontSize="16"
-              Padding="10"
-              Text="É a rotação por minuto calculado com o diâmetro externo."/>
-
-                <!--  ajuda Diametro Calota -->
-                
-                    <Label x:Name="TitleDimCalota"
-                      FontFamily="Arial"
-                      Padding="10,0"
-                      FontAttributes="Bold"
-                      Text="Diâmetro da calota:"
-                    />
-
-            <Label x:Name="textAjudaDiamCal"
-		      FontFamily="Arial"
-		      FontSize="16"
-              Padding="10"
-               Text="É o valor calculado do diâmetro efetivo de usinagem utilizando o diâmetro externo (De) declarado, de acordo com a profundidade (ap)."/>
-
-                <!--ajuda Correção RPM -->
-                
-                     <Label x:Name="TitleRpmCal"
-                       FontFamily="Arial"
-                       FontAttributes="Bold"
-                       Padding="10,0"
-                       Text="Correção do RPM para calota:"
-                     />
-
-            <Label x:Name="textAjudaRpmCal"
-		      FontFamily="Arial"
-		      FontSize="16"
-              Padding="10"
-              Text="É o valor calculado para correção da rotação por minuto utilizado para usinagem com o diâmetro efetivo."
-             />
-
-
-            </StackLayout>
-        </ScrollView>
+              Text= "É exibido o tipo de superfície que irá ficar a usinagem com os dados da Rugosidade Ra aproximada." 
+                   />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

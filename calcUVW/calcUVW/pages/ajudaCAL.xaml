@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcUVW.pages.ajudaCAL">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+
+            <!--ajuda  Diâmetro da Calota-->
+
+            <Label x:Name="TitleDiam"
+                 FontFamily="Arial"
+                 FontAttributes="Bold"
+                 Padding="10,0"
+                 FontSize="20"
+                 Text="Diâmetro da calota esférica:"
+            />
+
+            <Label x:Name="textAjudaDiam"
+		        FontFamily="Arial"
+		        FontSize="17"
+                Padding="10"
+                Text="Faz o cálculo da correção de diâmetro e correção da rotação por minuto no contato efetivo da ferramenta esférica, de acordo com sua profundidade de usinagem."
+            />
+
+            <!--ajuda Fresa esférica -->
+
+            <Label x:Name="TitleAE"
+                     FontFamily="Arial"
+                     FontAttributes="Bold"
+                     FontSize="20"
+                     Padding="10,0"
+                     Text="Diâmetro da fresa esférica:"
+                          
+            />
+
+            <Label x:Name="textAjudaAE"
+		      FontFamily="Arial"
+		      FontSize="17"
+              Padding="10"
+              Text= "É o valor do diâmetro externo da ferramenta utilizada no processo." 
+             />
+
+            <!--ajuda  Profundidade corte: -->
+
+            <Label x:Name="TitleCrista"
+                   FontFamily="Arial"
+                   FontAttributes="Bold"    
+                   FontSize="17"
+                   Padding="10,0"
+                   Text="Profundidade de corte:"
+                />
+
+
+            <Label x:Name="textAjudaCrista"
+		        FontFamily="Arial"
+		        FontSize="17"
+                Padding="10"
+                Text="É o valor de profundidade de corte utilizada para a ferramenta."
+              />
+
+            <!--ajuda  RPM -->
+
+            <Label x:Name="TitleRA"
+                       FontFamily="Arial"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Padding="10,0"
+                       Text="RPM No diâmetro externo"
+                    />
+
+            <Label x:Name="textAjuda"
+		      FontFamily="Arial"
+		      FontSize="17"
+              Padding="10"
+              Text="É a rotação por minuto calculado com o diâmetro externo."/>
+
+            <!--ajuda  Diametro da Calota -->
+
+            <Label x:Name="TitleSuperficie"
+                FontFamily="Arial"
+                FontAttributes="Bold"
+                FontSize="20"
+                Padding="10,0"
+                Text="Diâmetro da calota"
+            />
+
+
+            <Label x:Name="textAjudaSuperficie"
+		      FontFamily="Arial"
+		      FontSize="17"
+              Padding="10"
+              Text= "É o valor calculado do diâmetro efetivo de usinagem utilizando o diâmetro externo (De) declarado, de acordo com a profundidade (ap)." 
+            />
+
+            <!--ajuda  RPM -->
+                    <Label x:Name="TitleSuperfici"
+                           FontFamily="Arial"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Padding="10,0"
+                           Text="Correção do RPM para calota"        
+                        />
+
+            <Label x:Name="textAjudaSuperfici"
+		      FontFamily="Arial"
+		      FontSize="17"
+              Padding="10"
+              Text= "É o valor calculado para correção da rotação por minuto utilizado para usinagem com o diâmetro efetivo. " 
+            />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

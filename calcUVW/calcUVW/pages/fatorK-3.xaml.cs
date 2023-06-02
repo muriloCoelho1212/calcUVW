@@ -58,5 +58,10 @@ namespace calcUVW.pages
                 result.Text = "Impossível";
             }
         }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ajuda3(), true);
+        }
     }
 }

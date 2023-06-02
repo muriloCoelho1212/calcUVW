@@ -45,37 +45,100 @@
                        />
                 </pancake:PancakeView>
 
-                <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="labelCal"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontFamily="Arial"
+                        Padding="0, 16"
+			            FontSize="24"
+                        Text="Altura da Crista: "
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
                         <Label x:Name="Hcvalor"
-							   FontFamily="Arial"
-							   FontSize="24"
-							   Text="Altura da Crista: "
-							   Padding="22, 20, 10, 20"
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            VerticalOptions="Center"
+                            Padding="10"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
                     </pancake:PancakeView>
-                </StackLayout>
+                </Grid>
 
-                <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
+
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="labelRA"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontFamily="Arial"
+                        Padding="0, 16"
+			            FontSize="24"
+                        Text="Rugosidade RA: "
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
                         <Label x:Name="Ravalor"
-							   FontFamily="Arial"
-							   FontSize="24"
-							   Text="Rug. RA aproximada: "
-							   Padding="22, 20, 10, 20"
-						/>
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            VerticalOptions="Center"
+                            Padding="10"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
+                        />
                     </pancake:PancakeView>
-                </StackLayout>
-                <StackLayout Padding="-20, 10, -20, 10">
-                    <pancake:PancakeView Margin="0, 10, 0, 0">
+                </Grid>
+
+                <Grid Padding="0, 16, 0, 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="labelSu  "
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontFamily="Arial"
+                        Padding="0, 16"
+			            FontSize="24"
+                        Text="Tipo da superfície:"
+                    />
+                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
                         <Label x:Name="Anali"
-							   FontFamily="Arial"
-							   FontSize="24"
-							   Padding="22, 20, 10, 20"
-							   Text="Tipo da superfície: "
-						/>
+                            FontFamily="Arial"
+                            FontSize="24"
+                            Text=""
+                            VerticalOptions="Center"
+                            Padding="10"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
+                        />
                     </pancake:PancakeView>
-                </StackLayout>
+                </Grid>
+                
             </StackLayout>
             <Button x:Name="calcular"
 					CornerRadius="20"
