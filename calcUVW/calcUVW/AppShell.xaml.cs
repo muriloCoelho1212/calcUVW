@@ -25,21 +25,22 @@ namespace calcUVW
 
         private bool changeTheme = true;
 
-        //private void themeChanged_Toggled(object sender, EventArgs e)
-        //{
-        //    if (e.value)
-        //    {
-        //        App.Current.UserAppTheme = OSAppTheme.Dark;
-        //    }
-        //    else
-        //    {
-        //        App.Current.UserAppTheme = OSAppTheme.Light;
-        //    }
-        //    }
-        //}
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //}
+        private void themeChanged_Toggled(object sender, EventArgs e)
+        {
+            if (changeTheme)
+            {
+                App.Current.UserAppTheme = OSAppTheme.Dark;
+            }
+            else
+            {
+                App.Current.UserAppTheme = OSAppTheme.Light;
+            }
+
+            changeTheme = !changeTheme;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
     }
 }

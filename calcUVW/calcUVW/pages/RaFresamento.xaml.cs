@@ -40,29 +40,48 @@ namespace calcUVW.pages
                 Ra = (Hc / 4) * 1000;
 
                 if (Ra > 63)
+                {
                     Anali.Text += "Ressaltos";
+                }
                 if (Ra < 8.3)
+                {
                     Anali.Text += "Superfície aspera";
+                }
                 if (Ra < 6.3)
+                {
                     Anali.Text += "Desbastado";
+                }
                 if (Ra < 4.8)
+                {
                     Anali.Text += "Alisado grosso";
+                }
                 if (Ra < 3.2)
+                {
                     Anali.Text += "Alisado";
+                }
                 if (Ra < 1.6)
+                {
                     Anali.Text += "Alisado fino";
+                }
                 if (Ra < 0.8)
+                {
                     Anali.Text += "Retificado grosso";
+                }
                 if (Ra < 0.6)
+                {
                     Anali.Text += "Retificado";
+                }
                 if (Ra < 0.4)
+                {
                     Anali.Text += "Retificado fino";
+                }
 
                 Hcvalor.Text += Hc.ToString("N5");
                 Ravalor.Text += Ra.ToString("N3");
 
                 DeEntry.Text = "";
                 AEEntry.Text = "";
+                Anali.Text = "";
             }
             else
             {
@@ -72,12 +91,16 @@ namespace calcUVW.pages
             }
         }
 
-        private void calcular_Clicked(object sender, EventArgs e)
+        private async void calcular_Clicked(object sender, EventArgs e)
         {
-            Hcvalor.Text = Hcvalor.Text.Substring(0, 18);
-            Ravalor.Text = Ravalor.Text.Substring(0, 20);
-            Anali.Text = Anali.Text.Substring(0, 20);
-            raCalc();
+            if(DeEntry.Text == "" || AEEntry.Text == "")
+            {
+                await DisplayAlert("Valor inválido", "Insira um valor válido", "Ok");
+            }
+            else
+            {
+                raCalc();
+            }
         }
     }
 }

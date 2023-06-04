@@ -24,16 +24,31 @@ namespace calcUVW.pages
 
         private async void btnProxEtapa_Clicked(object sender, EventArgs e)
         {
-            varFatorK.Lv = Convert.ToDouble(compBlank.Text);
-            varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
-
-            if (angRandom.IsChecked == true)
+            if(compBlank.Text == null || espessChapa.Text == null)
             {
-                await Shell.Current.GoToAsync("fatorK_3");
+                await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
             }
             else
             {
-                await Shell.Current.GoToAsync("fatorK_2");
+                varFatorK.Lv = Convert.ToDouble(compBlank.Text);
+                varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
+
+                if(varFatorK.Lv <= 0 || varFatorK.Espv <= 0)
+                {
+                    await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
+                }
+                else
+                {
+                    if (angRandom.IsChecked == true)
+                    {
+                        await Shell.Current.GoToAsync("fatorK_3");
+                    }
+                    else
+                    {
+                        await Shell.Current.GoToAsync("fatorK_2");
+                    }
+                }
+
             }
         }
     }

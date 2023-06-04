@@ -7,16 +7,17 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ajuda2_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Padding="20, 30">
-                <Label x:Name="label_C"
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="20, 30">
+                    <Label x:Name="label_C"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Comprimento da peça:"
                        Padding="0, 10"
                     />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="C"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="C"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -25,15 +26,15 @@
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
-                </pancake:PancakeView>
-                <Label x:Name="label_alturaA"
+                    </pancake:PancakeView>
+                    <Label x:Name="label_alturaA"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Altura do lado A:"    
                             Padding="0, 10"
                     />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="ladoA"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="ladoA"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -42,15 +43,15 @@
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
-                </pancake:PancakeView>
-                <Label x:Name="label_alturaB"
+                    </pancake:PancakeView>
+                    <Label x:Name="label_alturaB"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Altura do lado B:"    
                        Padding="0, 10"
                     />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="ladoB"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="ladoB"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -59,15 +60,15 @@
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
-                </pancake:PancakeView>
-                <Label x:Name="label_raio_dobra"
+                    </pancake:PancakeView>
+                    <Label x:Name="label_raio_dobra"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Raio da dobra:"    
                         Padding="0, 10"
                     />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="raio_dobra"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="raio_dobra"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -76,19 +77,19 @@
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"
 			        />
-                </pancake:PancakeView>
-                <Grid Padding="0, 16, 0, 8">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                    </pancake:PancakeView>
+                    <Grid Padding="0, 16, 0, 8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Label x:Name="label_result"
+                        <Label x:Name="label_result"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -96,8 +97,8 @@
 			            FontSize="24"
                         Text="Fator K:"
                     />
-                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                        <Label x:Name="result"
+                        <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                            <Label x:Name="result"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -105,10 +106,10 @@
                             Padding="10"
                             BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
-                    </pancake:PancakeView>
-                </Grid>
-            </StackLayout>
-            <Button x:Name="Calcular"
+                        </pancake:PancakeView>
+                    </Grid>
+                </StackLayout>
+                <Button x:Name="Calcular"
 			    CornerRadius="20"
 			    BackgroundColor="{StaticResource ButtonBackgroundColor}"
                 Text="Calcular"
@@ -123,6 +124,7 @@
                 Margin="10, -20, 10, 10"
                 Clicked="Calcular_Clicked"
             />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

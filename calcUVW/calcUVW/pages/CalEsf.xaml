@@ -7,16 +7,17 @@
         <ToolbarItem IconImageSource="ajuda.png" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Padding="20,30">
-                <Label x:Name="labelFe"
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="20,30">
+                    <Label x:Name="labelFe"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Diâmetro da fresa esférica (De):"
                        Padding="0, 10"
 					 />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="DiamtroFe"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="DiamtroFe"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -26,15 +27,15 @@
                        ClearButtonVisibility="WhileEditing"
                        ReturnType="Next"
 					 />
-                </pancake:PancakeView>
-                <Label x:Name="labelCorte"
+                    </pancake:PancakeView>
+                    <Label x:Name="labelCorte"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Profundidade de corte (ap):"
                        Padding="0, 10"
 					 />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="ProfCorte"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="ProfCorte"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -42,16 +43,16 @@
                        MaxLength="7"
                        ClearButtonVisibility="WhileEditing"
                        ReturnType="Next"/>
-                </pancake:PancakeView>
+                    </pancake:PancakeView>
 
-                <Label x:Name="labelRpm"
+                    <Label x:Name="labelRpm"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="RPM no diâmetro externo:"
                        Padding="0, 10"
 					 />
-                <pancake:PancakeView CornerRadius="25" Padding="5">
-                <Entry x:Name="diamRpm"
+                    <pancake:PancakeView CornerRadius="25" Padding="5">
+                        <Entry x:Name="diamRpm"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -59,20 +60,20 @@
                        MaxLength="7"
                        ClearButtonVisibility="WhileEditing"
                        ReturnType="Next"/>
-                </pancake:PancakeView>
+                    </pancake:PancakeView>
 
-                <Grid Padding="0, 16, 0, 8">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                    <Grid Padding="0, 16, 0, 8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Label x:Name="labelCal"
+                        <Label x:Name="labelCal"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -80,8 +81,8 @@
 			            FontSize="24"
                         Text="Diâmetro: "
                     />
-                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                        <Label x:Name="calResult"
+                        <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                            <Label x:Name="calResult"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -89,20 +90,20 @@
                             Padding="10"
                             BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
-                    </pancake:PancakeView>                    
-                </Grid>
-                <Grid Padding="0, 16, 0, 8">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        </pancake:PancakeView>
+                    </Grid>
+                    <Grid Padding="0, 16, 0, 8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Label x:Name="lblRpm" 
+                        <Label x:Name="lblRpm" 
                         FontFamily="Arial"
                         FontSize="24"
                         Text="Correção do RPM: "
@@ -110,8 +111,8 @@
                         Grid.Row="0"
                         Grid.Column="0"
                     />
-                    <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                        <Label x:Name="rpmResult"
+                        <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
+                            <Label x:Name="rpmResult"
                                FontFamily="Arial"
                                FontSize="24"
                                Text=""
@@ -119,10 +120,10 @@
                                Padding="10"
                                BackgroundColor="{AppThemeBinding Dark={StaticResource EntryBackgroundColorDark}, Light={StaticResource EntryBackgroundColorLight}}"
                         />
-                    </pancake:PancakeView>
-                </Grid>
-            </StackLayout>
-            <Button x:Name="calcular"
+                        </pancake:PancakeView>
+                    </Grid>
+                </StackLayout>
+                <Button x:Name="calcular"
 			        CornerRadius="20"
 			        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                     Text="Calcular"
@@ -137,6 +138,7 @@
                     Margin="10, -30, 10, 10"
                     Clicked="calcular_Clicked"
             />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

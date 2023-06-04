@@ -11,9 +11,11 @@
               Text="Crie duas dobras, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C, R, ANG1 e ANG2. Coloque os valores medidos nos campos abaixo:"
               />
             <Image x:Name="img1"
+              Margin="20"
 		      Source="ajuda3.png"/>
             <Image x:Name="logo_uvw"
 		      Source="logoUVW.png"
+              Margin="20"
               VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
