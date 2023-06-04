@@ -16,41 +16,57 @@ namespace calcUVW.pages
         {
             InitializeComponent();
         }
-
-        private void CalEsfCalc()
+        private async void calcular_Clicked(object sender, EventArgs e)
         {
-            double De = Convert.ToDouble(DiamtroFe.Text);
-            double D;
-            double ap = Convert.ToDouble(ProfCorte.Text);
-            double RPM = Convert.ToDouble(diamRpm.Text);
-            double NRPM;
-            double R;
-            double vc;
-
-            R = De / 2;
-
-            if (ap < R)
+            try
             {
-                vc = RPM * De * 3.14159265 / 1000;
+                calResult.Text = "";
+                rpmResult.Text = "";
+                if (DiamtroFe.Text == null || ProfCorte.Text == null || diamRpm.Text == null)
+                {
+                    await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
+                }
+                else
+                {
+                    double De = Convert.ToDouble(DiamtroFe.Text);
+                    double ap = Convert.ToDouble(ProfCorte.Text);
+                    double RPM = Convert.ToDouble(diamRpm.Text);
+                    if (De <= 0 || ap <= 0 || RPM <= 0)
+                    {
+                        await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
+                    }
+                    else
+                    {
+                        double NRPM;
+                        double R;
+                        double vc;
+                        double D;
 
-                D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0);
+                        R = De / 2;
 
-                NRPM = vc * 1000 / (D * 3.14159265); 
+                        if (ap < R)
+                        {
+                            vc = RPM * De * 3.14159265 / 1000;
 
-                calResult.Text = D.ToString("N3");
-                rpmResult.Text = NRPM.ToString("N3");
+                            D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0);
+
+                            NRPM = vc * 1000 / (D * 3.14159265);
+
+                            calResult.Text = D.ToString("N3");
+                            rpmResult.Text = NRPM.ToString("N3");
+                        }
+                        else
+                        {
+                            calResult.Text = De.ToString();
+                            rpmResult.Text = Convert.ToDouble(diamRpm.Text).ToString();
+                        }
+                    }
+                }
             }
-            else
+            catch (FormatException)
             {
-                calResult.Text = De.ToString();
-                rpmResult.Text = ((double)Convert.ToDouble(diamRpm.Text)).ToString();
+                await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
             }
-        }
-        private void calcular_Clicked(object sender, EventArgs e)
-        {
-            calResult.Text = "";
-            rpmResult.Text = "";
-            CalEsfCalc();
         }
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
