@@ -163,7 +163,7 @@
                 BorderWidth="2"
                 VerticalOptions="EndAndExpand"
                 Padding="20"
-                Margin="10, -30, 10, 10"
+                Margin="10, -20, 10, 10"
                 Clicked="Calcular_Clicked"
             />
             </StackLayout>

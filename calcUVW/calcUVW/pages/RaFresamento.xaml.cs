@@ -58,11 +58,11 @@ namespace calcUVW.pages
                             {
                                 Anali.Text = "Ressaltos";
                             }
-                            if (Ra < 8.3)
+                            if (Ra > 8.3 && Ra < 63)
                             {
                                 Anali.Text = "Superfície aspera";
                             }
-                            if (Ra < 6.3)
+                            if (Ra < 6.3 )
                             {
                                 Anali.Text = "Desbastado";
                             }
