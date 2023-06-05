@@ -28,7 +28,7 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource CabecalhoRodapeLight}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource CabecalhoRodapeDark}, Light={StaticResource CabecalhoRodapeLight}}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -50,5 +50,5 @@
     <FlyoutItem Title="Calota Esférica">
         <ShellContent Route="CalEsf" ContentTemplate="{DataTemplate local:CalEsf}"/>
     </FlyoutItem>
-    <ToolbarItem Text="Tema" IconImageSource="sol.png" Clicked="themeChanged_Toggled"></ToolbarItem>
+    <ToolbarItem Text="Tema" IconImageSource="sol.png" Clicked="themeChanged_Clicked"></ToolbarItem>
 </Shell>

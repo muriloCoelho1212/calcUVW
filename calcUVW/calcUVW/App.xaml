@@ -18,15 +18,15 @@
             <Color x:Key="EntryBackgroundColorDark">#7E7E7E</Color>
             <Color x:Key="PlaceholderColorDark">#CDCDCD</Color>
             <Color x:Key="TextcolorDark">#E7FAF7</Color>
-            <Color x:Key="CabecalhoRodapeDark">#000</Color>
+            <Color x:Key="CabecalhoRodapeDark">#212121</Color>
 
             <!-- Light Theme -->
 
             <Color x:Key="BackgroundColorLight">#EFEFEF</Color>
-            <Color x:Key="EntryBackgroundColorLight">#E7FBF7</Color>
+            <Color x:Key="EntryBackgroundColorLight">#BCC5C3</Color>
             <Color x:Key="PlaceholderColorLight">#818285</Color>
             <Color x:Key="TextcolorLight">#1B1B1B</Color>
-            <Color x:Key="CabecalhoRodapeLight">#6B6B6B</Color>
+            <Color x:Key="CabecalhoRodapeLight">#A6A6A6</Color>
 
             <Style TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}"/>

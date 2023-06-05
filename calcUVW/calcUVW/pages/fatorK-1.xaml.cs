@@ -24,31 +24,37 @@ namespace calcUVW.pages
 
         private async void btnProxEtapa_Clicked(object sender, EventArgs e)
         {
-            if(compBlank.Text == null || espessChapa.Text == null)
+            try
             {
-                await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
-            }
-            else
-            {
-                varFatorK.Lv = Convert.ToDouble(compBlank.Text);
-                varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
-
-                if(varFatorK.Lv <= 0 || varFatorK.Espv <= 0)
+                if(compBlank.Text == null || espessChapa.Text == null)
                 {
-                    await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
+                    await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    if (angRandom.IsChecked == true)
+                    varFatorK.Lv = Convert.ToDouble(compBlank.Text);
+                    varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
+
+                    if(varFatorK.Lv <= 0 || varFatorK.Espv <= 0)
                     {
-                        await Shell.Current.GoToAsync("fatorK_3");
+                        await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
                     }
                     else
                     {
-                        await Shell.Current.GoToAsync("fatorK_2");
+                        if (angRandom.IsChecked == true)
+                        {
+                            await Shell.Current.GoToAsync("fatorK_3");
+                        }
+                        else
+                        {
+                            await Shell.Current.GoToAsync("fatorK_2");
+                        }
                     }
-                }
 
+                }
+            }catch(FormatException)
+            {
+                await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
             }
         }
     }

@@ -48,12 +48,12 @@ namespace calcUVW.pages
                         {
                             vc = RPM * De * 3.14159265 / 1000;
 
-                            D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0);
+                            D = 2 * Math.Pow((Math.Pow(R, 2) - Math.Pow((R - ap), 2)), 0.5);
 
-                            NRPM = vc * 1000 / (D * 3.14159265);
+                            NRPM = vc * 1000 / (D * 3.141592653);
 
                             calResult.Text = D.ToString("N3");
-                            rpmResult.Text = NRPM.ToString("N3");
+                            rpmResult.Text = NRPM.ToString("N0");
                         }
                         else
                         {

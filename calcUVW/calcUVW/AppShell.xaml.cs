@@ -23,20 +23,22 @@ namespace calcUVW
             Routing.RegisterRoute(nameof(fatorK_3), typeof(fatorK_3));
         }
 
-        private bool changeTheme = true;
-
-        private void themeChanged_Toggled(object sender, EventArgs e)
+        private bool changeTheme = false;
+        private async void themeChanged_Clicked(object sender, EventArgs e)
         {
             if (changeTheme)
             {
-                App.Current.UserAppTheme = OSAppTheme.Dark;
+                Application.Current.UserAppTheme = OSAppTheme.Dark;
+                Application.Current.Properties["tema"] = 2;
             }
             else
             {
-                App.Current.UserAppTheme = OSAppTheme.Light;
+                Application.Current.UserAppTheme = OSAppTheme.Light;
+                Application.Current.Properties["tema"] = 1;
             }
 
             changeTheme = !changeTheme;
+            await Application.Current.SavePropertiesAsync();
         }
         protected override void OnAppearing()
         {

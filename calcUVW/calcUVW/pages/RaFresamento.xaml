@@ -10,7 +10,6 @@
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <StackLayout Padding="20,30">
-
                     <Label x:Name="labelFerramenta"
 						FontFamily="Arial"
 						FontSize="24"
