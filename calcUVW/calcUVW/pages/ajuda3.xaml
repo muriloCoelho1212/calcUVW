@@ -8,7 +8,7 @@
 		      FontFamily="Arial"
 		      FontSize="24"
               Padding="20"
-              Text="Crie duas dobras, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C, R, ANG1 e ANG2. Coloque os valores medidos nos campos abaixo:"
+              Text="Crie duas dobras, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C, R, ANG1 e ANG2. Coloque os valores medidos nos campos desta página."
               />
             <Image x:Name="img1"
               Margin="20"

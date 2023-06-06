@@ -8,7 +8,7 @@
 		      FontFamily="Arial"
 		      FontSize="24"
               Padding="20"
-              Text="Crie duas dobras a 90 graus, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C e R. Coloque os valores medidos nos campos abaixo:"
+              Text="Crie duas dobras a 90 graus, uma em cada lado. Use a mesma dobradeira que você irá dobrar posteriormente as peças. Faça a medição das dimensões A, B, C e R. Coloque os valores medidos nos campos desta página."
               />
             <Image x:Name="img1" Source="dobrado.png"/>
             <Image x:Name="logo_uvw" Source="logoUVW.png" VerticalOptions="CenterAndExpand"/>

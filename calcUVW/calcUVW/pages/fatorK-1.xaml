@@ -50,7 +50,7 @@
                     />
                     <Label
                         x:Name="lblAngRandom"
-                        Text="Ângulo aleatório?"
+                        Text="Dobra diferente de 90º?"
                         VerticalOptions="Center"
                         FontSize="24"
                         Padding="10"

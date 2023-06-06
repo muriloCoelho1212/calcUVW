@@ -8,7 +8,7 @@
 		      FontFamily="Arial"
 		      FontSize="24"
               Padding="20"
-              Text="Recorte um blank retangular com o material e espessura que você irá trabalhar com as dobras. Faça a medição do comprimento deste blank e coloque o valor no campo L da página."
+              Text="Recorte um blank retangular com o material e espessura que você irá trabalhar com as dobras. Faça a medição do comprimento deste blank e coloque o valor no campo 'Comprimento do Blank' da página. Coloque também o valor da espessura da chapa no campo 'Espessura da Chapa'"
               />
             <Image x:Name="img1"
 		      Source="blankAberto.png"/>
