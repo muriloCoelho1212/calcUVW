@@ -9,14 +9,14 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <StackLayout Padding="20, 30">
-                <Label x:Name="labelBlank"
+                <Label x:Name="lblCompBlank"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Comprimento do Blank:"
                        Padding="0, 10"
                 />
                 <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="compBlank"
+                    <Entry x:Name="entCompBlank"
                            FontFamily="Arial"
                            FontSize="24"
                            Keyboard="Numeric"
@@ -26,14 +26,14 @@
                            ReturnType="Next"
 				    />
                 </pancake:PancakeView>
-                <Label x:Name="labelChapa"
+                <Label x:Name="lblEspessChapa"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Espessura da chapa:"
                        Padding="0, 10"
 			    />
                 <pancake:PancakeView CornerRadius="25" Padding="5">
-                    <Entry x:Name="espessChapa"
+                    <Entry x:Name="entEspessChapa"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -44,11 +44,12 @@
                 </pancake:PancakeView>
                 <StackLayout Orientation="Horizontal" Padding="0, 20">
                     <CheckBox 
-                        x:Name="angRandom"
+                        x:Name="chkboxAngRandom"
                         ScaleX="1.8"
                         ScaleY="1.8"
                     />
                     <Label
+                        x:Name="lblAngRandom"
                         Text="Ângulo aleatório?"
                         VerticalOptions="Center"
                         FontSize="24"
@@ -57,16 +58,13 @@
                 </StackLayout>
             </StackLayout>
 
-            <Button x:Name="btnProxEtapa"
+            <Button x:Name="btnCalcular"
 			        CornerRadius="20"
-			        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                     Text="Próxima Etapa"
-                    TextColor="{StaticResource Textcolor}"
                     FontSize="24"
                     FontFamily="Arial"
                     FontAttributes="Bold"
                     Clicked="btnProxEtapa_Clicked"
-                    BorderColor="#66ffffff"
                     BorderWidth="2"
                     VerticalOptions="EndAndExpand"
                     Padding="20"

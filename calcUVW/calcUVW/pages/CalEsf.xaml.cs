@@ -20,17 +20,17 @@ namespace calcUVW.pages
         {
             try
             {
-                calResult.Text = "";
-                rpmResult.Text = "";
-                if (DiamtroFe.Text == null || ProfCorte.Text == null || diamRpm.Text == null)
+                resultDiametro.Text = "";
+                resultCorrecaoRPM.Text = "";
+                if (entFresa.Text == null || entProfCorte.Text == null || entRPM.Text == null)
                 {
                     await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    double De = Convert.ToDouble(DiamtroFe.Text);
-                    double ap = Convert.ToDouble(ProfCorte.Text);
-                    double RPM = Convert.ToDouble(diamRpm.Text);
+                    double De = Convert.ToDouble(entFresa.Text);
+                    double ap = Convert.ToDouble(entProfCorte.Text);
+                    double RPM = Convert.ToDouble(entRPM.Text);
                     if (De <= 0 || ap <= 0 || RPM <= 0)
                     {
                         await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
@@ -52,13 +52,13 @@ namespace calcUVW.pages
 
                             NRPM = vc * 1000 / (D * 3.141592653);
 
-                            calResult.Text = D.ToString("N3");
-                            rpmResult.Text = NRPM.ToString("N0");
+                            resultDiametro.Text = D.ToString("N3");
+                            resultCorrecaoRPM.Text = NRPM.ToString("N0");
                         }
                         else
                         {
-                            calResult.Text = De.ToString();
-                            rpmResult.Text = Convert.ToDouble(diamRpm.Text).ToString();
+                            resultDiametro.Text = De.ToString();
+                            resultCorrecaoRPM.Text = Convert.ToDouble(entRPM.Text).ToString();
                         }
                     }
                 }

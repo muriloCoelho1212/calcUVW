@@ -24,6 +24,7 @@ namespace calcUVW
         }
 
         private bool changeTheme = false;
+        public string changeIconTheme;
         private async void themeChanged_Clicked(object sender, EventArgs e)
         {
             if (changeTheme)

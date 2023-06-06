@@ -26,14 +26,14 @@ namespace calcUVW.pages
         {
             try
             {
-                if(compBlank.Text == null || espessChapa.Text == null)
+                if(entCompBlank.Text == null || entEspessChapa.Text == null)
                 {
                     await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    varFatorK.Lv = Convert.ToDouble(compBlank.Text);
-                    varFatorK.Espv = Convert.ToDouble(espessChapa.Text);
+                    varFatorK.Lv = Convert.ToDouble(entCompBlank.Text);
+                    varFatorK.Espv = Convert.ToDouble(entEspessChapa.Text);
 
                     if(varFatorK.Lv <= 0 || varFatorK.Espv <= 0)
                     {
@@ -41,7 +41,7 @@ namespace calcUVW.pages
                     }
                     else
                     {
-                        if (angRandom.IsChecked == true)
+                        if (chkboxAngRandom.IsChecked == true)
                         {
                             await Shell.Current.GoToAsync("fatorK_3");
                         }

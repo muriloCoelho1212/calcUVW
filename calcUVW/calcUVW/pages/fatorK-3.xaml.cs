@@ -24,19 +24,19 @@ namespace calcUVW.pages
             double Espv = varFatorK.Espv;
             try
             {
-                result.Text = "";
-                if(C.Text == null || ladoA.Text == null || ladoB.Text == null || raio_dobra.Text == null || ent_ang1.Text == null || ent_ang2.Text == null)
+                resultFatorK.Text = "";
+                if(entCompBlank.Text == null || entAltA.Text == null || entAltB.Text == null || entRaioDobra.Text == null || entAng1.Text == null || entAng2.Text == null)
                 {
                     await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    double Cv = Convert.ToDouble(C.Text);
-                    double Av = Convert.ToDouble(ladoA.Text);
-                    double Bv = Convert.ToDouble(ladoB.Text);
-                    double Rv = Convert.ToDouble(raio_dobra.Text);
-                    double a1 = Convert.ToDouble(ent_ang1.Text);
-                    double a2 = Convert.ToDouble(ent_ang2.Text);
+                    double Cv = Convert.ToDouble(entCompBlank.Text);
+                    double Av = Convert.ToDouble(entAltA.Text);
+                    double Bv = Convert.ToDouble(entAltB.Text);
+                    double Rv = Convert.ToDouble(entRaioDobra.Text);
+                    double a1 = Convert.ToDouble(entAng1.Text);
+                    double a2 = Convert.ToDouble(entAng2.Text);
                     if(Cv <= 0 || Av <= 0 || Bv <= 0 || Rv <= 0 || a1 <= 0 || a2 <= 0)
                     {
                         await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
@@ -67,11 +67,11 @@ namespace calcUVW.pages
 
                         if(Kr1 <= 0)
                         {
-                            result.Text = "Impossível";
+                            resultFatorK.Text = "Impossível";
                         }
                         else
                         {
-                            result.Text = Kr1.ToString("N5");
+                            resultFatorK.Text = Kr1.ToString("N5");
                         }
                     }
                 }

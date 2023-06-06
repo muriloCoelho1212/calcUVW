@@ -12,6 +12,7 @@
             <Color x:Key="EntryBackgroundColor">#7E7E7E</Color>
             <Color x:Key="PlaceholderColor">#CDCDCD</Color>
             <Color x:Key="Textcolor">#E7FAF7</Color>
+            <Color x:Key="ButtonBorderColor">#66ffffff</Color>
 
             <!-- Dark Theme -->
             <Color x:Key="BackgroundColorDark">#393838</Color>
@@ -19,6 +20,7 @@
             <Color x:Key="PlaceholderColorDark">#CDCDCD</Color>
             <Color x:Key="TextcolorDark">#E7FAF7</Color>
             <Color x:Key="CabecalhoRodapeDark">#212121</Color>
+            <Color x:Key="ButtonBackgroundColorDark">#0E76BC</Color>
 
             <!-- Light Theme -->
 
@@ -27,7 +29,10 @@
             <Color x:Key="PlaceholderColorLight">#818285</Color>
             <Color x:Key="TextcolorLight">#1B1B1B</Color>
             <Color x:Key="CabecalhoRodapeLight">#A6A6A6</Color>
-
+            <Color x:Key="ButtonBackgroundColorLight">#53DDCC</Color>
+            
+            <!-- Styles -->
+            
             <Style TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundColorDark}, Light={StaticResource BackgroundColorLight}}"/>
             </Style>
@@ -43,6 +48,11 @@
             </Style>
             <Style TargetType="CheckBox">
                 <Setter Property="Color" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource ButtonBackgroundColorDark}, Light={StaticResource ButtonBackgroundColorLight}}"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextcolorDark}, Light={StaticResource TextcolorLight}}"/>
+                <Setter Property="BorderColor" Value="{StaticResource ButtonBorderColor}"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

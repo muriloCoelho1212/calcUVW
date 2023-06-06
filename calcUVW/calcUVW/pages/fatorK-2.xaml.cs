@@ -27,17 +27,17 @@ namespace calcUVW.pages
             double Espv = varFatorK.Espv;
             try
             {
-                result.Text = "";
-                if(C.Text == null || ladoA.Text == null || ladoB.Text == null || raio_dobra.Text == null)
+                resultFatorK.Text = "";
+                if(entCompPeca.Text == null || entAltA.Text == null || entAltB.Text == null || entRaioDobra.Text == null)
                 {
                     await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    double Cv = Convert.ToDouble(C.Text);
-                    double Av = Convert.ToDouble(ladoA.Text);
-                    double Bv = Convert.ToDouble(ladoB.Text);
-                    double Rv = Convert.ToDouble(raio_dobra.Text);
+                    double Cv = Convert.ToDouble(entCompPeca.Text);
+                    double Av = Convert.ToDouble(entAltA.Text);
+                    double Bv = Convert.ToDouble(entAltB.Text);
+                    double Rv = Convert.ToDouble(entRaioDobra.Text);
                     if(Cv <= 0 || Av <= 0 || Bv <= 0 || Rv <= 0)
                     {
                         await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
@@ -63,11 +63,11 @@ namespace calcUVW.pages
 
                         if (K <= 0)
                         {
-                            result.Text = "Impossível";
+                            resultFatorK.Text = "Impossível";
                         }
                         else
                         {
-                            result.Text = K.ToString("N5");
+                            resultFatorK.Text = K.ToString("N5");
                         }
                     }
                 }

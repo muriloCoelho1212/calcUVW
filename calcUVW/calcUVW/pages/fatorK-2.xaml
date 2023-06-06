@@ -10,14 +10,14 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout Padding="20, 30">
-                    <Label x:Name="label_C"
+                    <Label x:Name="lblCompPeca"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Comprimento da peça:"
                        Padding="0, 10"
                     />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="C"
+                        <Entry x:Name="entCompPeca"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -27,14 +27,14 @@
                         ReturnType="Next"
 			        />
                     </pancake:PancakeView>
-                    <Label x:Name="label_alturaA"
+                    <Label x:Name="lblAltA"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Altura do lado A:"    
                             Padding="0, 10"
                     />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="ladoA"
+                        <Entry x:Name="entAltA"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -44,14 +44,14 @@
                         ReturnType="Next"
 			        />
                     </pancake:PancakeView>
-                    <Label x:Name="label_alturaB"
+                    <Label x:Name="lblAltB"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Altura do lado B:"    
                        Padding="0, 10"
                     />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="ladoB"
+                        <Entry x:Name="entAltB"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -61,14 +61,14 @@
                         ReturnType="Next"
 			        />
                     </pancake:PancakeView>
-                    <Label x:Name="label_raio_dobra"
+                    <Label x:Name="lblRaioDobra"
 				        FontFamily="Arial"
 				        FontSize="24"
 				        Text="Raio da dobra:"    
                         Padding="0, 10"
                     />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="raio_dobra"
+                        <Entry x:Name="entRaioDobra"
                         FontFamily="Arial"
                         FontSize="24"
                         Keyboard="Numeric"
@@ -89,7 +89,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="label_result"
+                        <Label x:Name="lblFatorK"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -98,7 +98,7 @@
                         Text="Fator K:"
                     />
                         <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                            <Label x:Name="result"
+                            <Label x:Name="resultFatorK"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -109,15 +109,13 @@
                         </pancake:PancakeView>
                     </Grid>
                 </StackLayout>
-                <Button x:Name="Calcular"
+                <Button x:Name="btnCalcular"
 			    CornerRadius="20"
-			    BackgroundColor="{StaticResource ButtonBackgroundColor}"
                 Text="Calcular"
-                TextColor="{StaticResource Textcolor}"
                 FontSize="24"
                 FontFamily="Arial"
                 FontAttributes="Bold"
-                BorderColor="#66ffffff"
+                BorderColor="#"
                 BorderWidth="2"
                 VerticalOptions="EndAndExpand"
                 Padding="20"

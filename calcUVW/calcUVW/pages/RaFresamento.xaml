@@ -4,20 +4,20 @@
              x:Class="calcUVW.pages.RaFresamento"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <ContentPage.ToolbarItems>
-        <ToolbarItem   IconImageSource="ajuda.png" Clicked="ajudaRA_Clicked" />
+        <ToolbarItem IconImageSource="ajuda.png" Clicked="ajudaRA_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <StackLayout Padding="20,30">
-                    <Label x:Name="labelFerramenta"
+                    <Label x:Name="lblFerramenta"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Diâmetro da Ferramenta:"
                         Padding="0, 10"
 						 />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="DeEntry"
+                        <Entry x:Name="entFerramenta"
                        FontFamily="Arial"
                        FontSize="24"
                        Keyboard="Numeric"
@@ -27,14 +27,14 @@
                        ReturnType="Next"/>
                     </pancake:PancakeView>
 
-                    <Label x:Name="labelPassLat"
+                    <Label x:Name="lblPassoLateral"
 						FontFamily="Arial"
 						FontSize="24"
 						Text="Passo lateral (ae):"
                         Padding="0, 10"
 						 />
                     <pancake:PancakeView CornerRadius="25" Padding="5">
-                        <Entry x:Name="AEEntry"
+                        <Entry x:Name="EntPassoLateral"
 						FontFamily="Arial"
 						FontSize="24"
 						Keyboard="Numeric"
@@ -56,7 +56,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="labelCal"
+                        <Label x:Name="lblAltCrista"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -65,7 +65,7 @@
                         Text="Altura da Crista: "
                     />
                         <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                            <Label x:Name="Hcvalor"
+                            <Label x:Name="resultAltCrista"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -88,7 +88,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="labelRA"
+                        <Label x:Name="lblRA"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -97,7 +97,7 @@
                         Text="Rugosidade RA: "
                     />
                         <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                            <Label x:Name="Ravalor"
+                            <Label x:Name="resultRA"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -119,7 +119,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="labelSu  "
+                        <Label x:Name="lblTipoSup"
                         Grid.Column="0"
                         Grid.Row="0"
                         FontFamily="Arial"
@@ -128,7 +128,7 @@
                         Text="Tipo da superfície:"
                     />
                         <pancake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="24">
-                            <Label x:Name="Anali"
+                            <Label x:Name="resultTipoSup"
                             FontFamily="Arial"
                             FontSize="24"
                             Text=""
@@ -140,16 +140,13 @@
                     </Grid>
 
                 </StackLayout>
-                <Button x:Name="calcular"
+                <Button x:Name="btnCalcular"
 					CornerRadius="20"
-					BackgroundColor="{StaticResource ButtonBackgroundColor}"
 					Text="Calcular"
-					TextColor="{StaticResource Textcolor}"
 					FontSize="24"
 					FontFamily="Arial"
 					FontAttributes="Bold"
                     Clicked="calcular_Clicked"
-					BorderColor="#66ffffff"
 					BorderWidth="2"
 					VerticalOptions="EndAndExpand"
 					Padding="20"

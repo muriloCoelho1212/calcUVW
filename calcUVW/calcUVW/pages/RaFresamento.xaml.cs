@@ -25,17 +25,17 @@ namespace calcUVW.pages
         {
             try
             {
-                Hcvalor.Text = "";
-                Ravalor.Text = "";
-                Anali.Text = "";
-                if(DeEntry.Text == null || AEEntry.Text == null)
+                resultAltCrista.Text = "";
+                resultRA.Text = "";
+                resultTipoSup.Text = "";
+                if(entFerramenta.Text == null || EntPassoLateral.Text == null)
                 {
                     await DisplayAlert("Campos vazios", "Preencha os campos vazios para continuar", "Ok");
                 }
                 else
                 {
-                    double De = Convert.ToDouble(DeEntry.Text);
-                    double AE = Convert.ToDouble(AEEntry.Text);
+                    double De = Convert.ToDouble(entFerramenta.Text);
+                    double AE = Convert.ToDouble(EntPassoLateral.Text);
                     if(De <= 0 ||  AE <= 0)
                     {
                         await DisplayAlert("Valor inválido", "Preencha os campos com valores válidos", "Ok");
@@ -56,49 +56,49 @@ namespace calcUVW.pages
 
                             if (Ra > 63)
                             {
-                                Anali.Text = "Ressaltos";
+                                resultTipoSup.Text = "Ressaltos";
                             }
-                            if (Ra > 8.3 && Ra < 63)
+                            else if (Ra > 6.3 && Ra < 63)
                             {
-                                Anali.Text = "Superfície aspera";
+                                resultTipoSup.Text = "Superfície aspera";
                             }
-                            if (Ra < 6.3 )
+                            else if (Ra > 4.8 && Ra < 6.3)
                             {
-                                Anali.Text = "Desbastado";
+                                resultTipoSup.Text = "Desbastado";
                             }
-                            if (Ra < 4.8)
+                            else if (Ra > 3.2 && Ra < 4.8)
                             {
-                                Anali.Text = "Alisado grosso";
+                                resultTipoSup.Text = "Alisado grosso";
                             }
-                            if (Ra < 3.2)
+                            else if (Ra > 1.6 && Ra < 3.2)
                             {
-                                Anali.Text = "Alisado";
+                                resultTipoSup.Text = "Alisado";
                             }
-                            if (Ra < 1.6)
+                            else if (Ra > 0.8 && Ra < 1.6)
                             {
-                                Anali.Text = "Alisado fino";
+                                resultTipoSup.Text = "Alisado fino";
                             }
-                            if (Ra < 0.8)
+                            else if (Ra > 0.6 && Ra < 0.8)
                             {
-                                Anali.Text = "Retificado grosso";
+                                resultTipoSup.Text = "Retificado grosso";
                             }
-                            if (Ra < 0.6)
+                            else if (Ra > 0.4 && Ra < 0.6)
                             {
-                                Anali.Text = "Retificado";
+                                resultTipoSup.Text = "Retificado";
                             }
-                            if (Ra < 0.4)
+                            else if (Ra > 0 && Ra < 0.4)
                             {
-                                Anali.Text = "Retificado fino";
+                                resultTipoSup.Text = "Retificado fino";
                             }
 
-                            Hcvalor.Text = Hc.ToString("N5");
-                            Ravalor.Text = Ra.ToString("N3");
+                            resultAltCrista.Text = Hc.ToString("N5");
+                            resultRA.Text = Ra.ToString("N3");
                         }
                         else
                         {
-                            Hcvalor.Text = "Impossível";
-                            Ravalor.Text = "Impossível";
-                            Anali.Text = "Impossível";
+                            resultAltCrista.Text = "Impossível";
+                            resultRA.Text = "Impossível";
+                            resultTipoSup.Text = "Impossível";
                         }
                     }
                 }
