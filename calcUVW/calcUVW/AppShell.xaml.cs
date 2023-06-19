@@ -44,5 +44,11 @@ namespace calcUVW
         {
             base.OnAppearing();
         }
+
+        private async void btnQuemSomos_Clicked(object sender, EventArgs e)
+        {
+            Uri uri = new Uri("https://www.uvw.com.br");
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        }
     }
 }

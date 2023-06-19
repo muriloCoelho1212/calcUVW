@@ -125,13 +125,10 @@
                 </StackLayout>
                 <Button x:Name="calcular"
 			        CornerRadius="20"
-			        BackgroundColor="{StaticResource ButtonBackgroundColor}"
                     Text="Calcular"
-                    TextColor="{StaticResource Textcolor}"
                     FontSize="24"
                     FontFamily="Arial"
                     FontAttributes="Bold"
-                    BorderColor="#66ffffff"
                     BorderWidth="2"
                     VerticalOptions="EndAndExpand"
                     Padding="20"
